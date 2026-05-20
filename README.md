@@ -1,4 +1,4 @@
-![SonicDE on Arch Linux](./docs/img/screenshot.png)
+![SonicDE on Arch Linux](./docs/img/screenshot.jpg)
 
 # SonicDE Packages for Arch Linux Systems
 
