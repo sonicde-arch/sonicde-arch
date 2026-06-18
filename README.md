@@ -22,13 +22,11 @@ You can read more package signing on the [pacman/Package signing - ArchWiki](htt
 
 ### Adding the Repository to Pacman
 
-Once you added the public key, also add an entry for the SonicDE repository to the end of the file `/etc/pacman.conf` by running the following instructions at the command line:
+Once you added the public key, also add an entry for the SonicDE repository to the end of the file [`/etc/pacman.conf`](https://man.archlinux.org/man/pacman.conf.5) using [`sudo`](https://wiki.archlinux.org/title/Sudo) and your favorite editor:
 
-```shell
-sudo tee -a /etc/pacman.conf <<'EOF'
+```ini
 [sonicde]
 Server = https://sonicde-arch.github.io/$arch
-EOF
 ```
 
 Run `pacman` to update all package indexes and installed packages:
