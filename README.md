@@ -4,7 +4,7 @@
 
 This third-party repository provides [SonicDE](https://sonicde.org) x86_64 binary  packages for [Arch Linux](https://archlinux.org)-based distributions. SonicDE, or the Sonic Desktop Environment, aims to preserve and improve the X11-specific aspects of KDE. You can learn more about SonicDE at [sonicde.org](https://sonicde.org/).
 
-The packages of this repository are known to work with [Arch Linux](https://archlinux.org) and [Garuda Linux](https://garudalinux.org). We'll also verify the functionality on [ArchCraft](https://archcraft.io), [CachyOS](https://cachyos.org), [EndeavourOS](https://endeavouros.com), the testing branch of [Manjaro Linux](https://manjaro.org), and [RebornOS](https://rebornos.org).
+The packages of this repository are known to work with [Arch Linux](https://archlinux.org), [CachyOS](https://cachyos.org), [EndeavourOS](https://endeavouros.com), and [Garuda Linux](https://garudalinux.org). We'll also verify the functionality on [ArchCraft](https://archcraft.io), the testing branch of [Manjaro Linux](https://manjaro.org), and [RebornOS](https://rebornos.org).
 
 ## Installing SonicDE Manually
 
