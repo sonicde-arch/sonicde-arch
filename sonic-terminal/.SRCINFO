@@ -1,6 +1,6 @@
 pkgbase = sonic-terminal
 	pkgdesc = SonicDE terminal emulator
-	pkgver = 26.04.3.1
+	pkgver = 26.04.3.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-terminal
 	arch = x86_64
@@ -43,6 +43,6 @@ pkgbase = sonic-terminal
 	provides = konsole
 	conflicts = konsole
 	source = sonic-terminal-26.04.3.1.tar.gz::https://github.com/Sonic-DE/sonic-terminal/archive/refs/tags/26.04.3.1.tar.gz
-	sha256sums = feeb59124ef82a803ec4d2d3f07fa8d39f7e594a4572c73cf04600a8c98b4593
+	sha256sums = f39685fbc4e47bdc7ce28299b925ff3a92d17ef0e2fe940c05a52f9e3bb44403
 
 pkgname = sonic-terminal
