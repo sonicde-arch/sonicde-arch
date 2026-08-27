@@ -32,7 +32,7 @@ pkgbase = sonic-breeze
 	depends = sonic-silver
 	depends = xdg-utils
 	conflicts = breeze-cursors
-	source = sonic-breeze-6.7.4.4.tar.gz::https://github.com/Sonic-DE/sonic-breeze/archive/refs/tags/6.7.4.4.tar.gz
+	source = sonic-breeze-6.7.4.5.tar.gz::https://github.com/Sonic-DE/sonic-breeze/archive/refs/tags/6.7.4.5.tar.gz
 	sha256sums = 1c0e17621e8135c668ee0d6c1e69ab2b6d2db1aec4801f72eceaea0a2ee7a749
 
 pkgname = sonic-breeze
