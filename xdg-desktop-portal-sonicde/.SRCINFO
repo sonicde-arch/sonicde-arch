@@ -41,6 +41,6 @@ pkgbase = xdg-desktop-portal-sonicde
 	provides = xdg-desktop-portal-kde
 	conflicts = xdg-desktop-portal-kde
 	source = xdg-desktop-portal-sonicde-6.7.4.1.tar.gz::https://github.com/Sonic-DE/xdg-desktop-portal-sonicde/archive/refs/tags/6.7.4.1.tar.gz
-	sha256sums = ce2791537b4cf62c9e0e5d95b7b094571c6ac48a778cf7faed311f208ede270c
+	sha256sums = a8b63008b233044bac0ba0ef9369c60e12f5c454908ce1ae62adb748db48bc4e
 
 pkgname = xdg-desktop-portal-sonicde
