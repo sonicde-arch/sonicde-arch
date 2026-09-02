@@ -122,7 +122,7 @@ pkgbase = sonic-workspace
 	conflicts = plasma-x11-session
 	conflicts = sonic-x11-session
 	replaces = sonic-x11-session
-	source = sonic-workspace-6.7.4.6.tar.gz::https://github.com/Sonic-DE/sonic-workspace/archive/refs/tags/6.7.4.6.tar.gz
+	source = sonic-workspace-6.7.4.7.tar.gz::https://github.com/Sonic-DE/sonic-workspace/archive/refs/tags/6.7.4.7.tar.gz
 	sha256sums = 55fd1d1a293bad77b2a398473439bcc8bbfab9f2006cefdeb3ebd70c23cbe049
 
 pkgname = sonic-workspace
