@@ -1,0 +1,4 @@
+[sonicde-meta]
+source = "github"
+github = "Sonic-DE/sonicde-meta"
+use_max_tag = true
