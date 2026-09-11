@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-silver-icons
-pkgver=6.29.0.1
+pkgver=6.30.0
 pkgrel=1
 pkgdesc='Silver icon theme'
 arch=(x86_64)
@@ -19,7 +19,7 @@ provides=(breeze-icons)
 conflicts=(breeze-icons)
 groups=(sonicde-frameworks)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('af68b35b4f08ec6a83d8522ffffa840bdda71f6ef877d109265225e53b3c1250')
+sha256sums=('96f6b657a70851c3ffb2f43fd1b8687d4c43f9f63c5cdbfb211eb9cd8ef49ac7')
 
 build() {
   cmake -B build -S $pkgname-$pkgver \
