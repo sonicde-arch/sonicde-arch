@@ -1,12 +1,13 @@
 pkgbase = sonic-quick-image-editor
 	pkgdesc = QML image editing components with SonicDE defaults
 	pkgver = 0.7.0.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-quick-image-editor
 	arch = x86_64
 	groups = sonicde
 	license = LGPL-2.1-or-later
 	makedepends = sonic-frameworks-cmake-modules
+	makedepends = qt6-shadertools
 	depends = glibc
 	depends = kconfig
 	depends = libgcc
