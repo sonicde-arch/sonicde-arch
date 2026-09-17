@@ -1,0 +1,4 @@
+[sonic-rdp-server]
+source = "github"
+github = "Sonic-DE/sonic-rdp-server"
+use_max_tag = true
