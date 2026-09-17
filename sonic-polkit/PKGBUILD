@@ -32,7 +32,7 @@ sha256sums=('ec325d7e9b2293380c2596f38c617f124d145577264e80d40713de780f5e8448')
 build() {
 	cmake -B build -S "$pkgbase-$pkgver" \
 		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DFEATURE_developer_build=ON
+		-DQT_MAJOR_VERSION=6
 	cmake --build build
 }
 
