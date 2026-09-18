@@ -2,7 +2,7 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Felix Yan <felixonmars@archlinux.org>
 
-pkgbase=sonic-pyside6
+pkgbase=sonic-pyside-setup
 pkgname=(
 	'sonic-pyside6'
 	'sonic-pyside6-tools'
