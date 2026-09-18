@@ -4,7 +4,7 @@
 # Contributor: Pierre Schmitz <pierre@archlinux.de>
 
 pkgname=sonic-polkit
-pkgver=0.201.1
+pkgver=0.201.2
 pkgrel=1
 pkgdesc='A library that allows developers to access PolicyKit API with a nice Qt-style API'
 arch=('x86_64')
@@ -27,7 +27,7 @@ provides=('polkit-qt6')
 conflicts=('polkit-qt6')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('ec325d7e9b2293380c2596f38c617f124d145577264e80d40713de780f5e8448')
+sha256sums=('22757af51dc38179936f6e5807eefaa01ba4d123c82319b150d8095027ff543e')
 
 build() {
 	cmake -B build -S "$pkgbase-$pkgver" \
