@@ -22,6 +22,7 @@ makedepends=('cmake')
 provides=('libaccounts-qt')
 conflicts=('libaccounts-qt')
 groups=('sonicde')
+source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 sha256sums=('6ab0a000dd494f52593f8233bba0643035ffbcacbd99c71947f20fe655f0ba55')
 
 build() {
