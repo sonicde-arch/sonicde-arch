@@ -40,11 +40,7 @@ pkgbase = sonic-pyside6
 	makedepends = qt6-websockets
 	makedepends = qt6-webview
 	source = sonic-pyside-setup-6.11.2.tar.gz::https://github.com/Sonic-DE/sonic-pyside-setup/archive/refs/tags/6.11.2.tar.gz
-	source = header-install-paths-01.patch
-	source = header-install-paths-02.patch
 	sha256sums = 489aaa56eecb6311196be12851c80373ed6c06f64cd69f90aa86004033e50964
-	sha256sums = 3def01bb41ca3f52f03d3e573e3a28bead348b8f975b180e9d269a57a3104fd8
-	sha256sums = 03875c92384587cf6920d7529be8820e4d27d727ef38f811f8ca5882e2e2cd78
 
 pkgname = sonic-pyside6
 	pkgdesc = Enables the use of Qt6 APIs in Python applications
