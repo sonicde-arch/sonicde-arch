@@ -13,7 +13,8 @@ pkgbase = sonic-silver-icons
 	depends = qt6-base
 	provides = breeze-icons
 	conflicts = breeze-icons
+	replaces = sonic-frameworks-silver-icons
 	source = sonic-silver-icons-6.30.0.tar.gz::https://github.com/Sonic-DE/sonic-silver-icons/archive/refs/tags/6.30.0.tar.gz
-	sha256sums = 96f6b657a70851c3ffb2f43fd1b8687d4c43f9f63c5cdbfb211eb9cd8ef49ac7
+	sha256sums = 7baf0658bb910a2a4f748f98d66f83dba0a3cd25203bf619fe1721d9beba2ec9
 
 pkgname = sonic-silver-icons

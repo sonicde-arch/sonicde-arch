@@ -1,7 +1,7 @@
 pkgbase = sonic-frameworks-icon-themes
 	pkgdesc = Support for icon themes
 	pkgver = 6.30.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-frameworks-icon-themes
 	arch = x86_64
 	groups = sonicde-frameworks
@@ -19,7 +19,7 @@ pkgbase = sonic-frameworks-icon-themes
 	depends = qt6-base
 	depends = qt6-svg
 	depends = sonic-frameworks-color-scheme
-	depends = sonic-frameworks-silver-icons
+	depends = sonic-silver-icons
 	optdepends = qt6-declarative: QML bindings
 	provides = kiconthemes
 	conflicts = kiconthemes
