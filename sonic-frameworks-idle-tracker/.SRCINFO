@@ -1,5 +1,5 @@
 pkgbase = sonic-frameworks-idle-tracker
-	pkgdesc = X11 user activity monitoring framework for SonicDE
+	pkgdesc = User activity monitoring framework for SonicDE
 	pkgver = 6.30.0
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-idle-tracker
@@ -8,8 +8,8 @@ pkgbase = sonic-frameworks-idle-tracker
 	license = LGPL-2.0-only
 	license = LGPL-3.0-only
 	makedepends = doxygen
-	makedepends = sonic-frameworks-cmake-modules
 	makedepends = qt6-tools
+	makedepends = sonic-frameworks-cmake-modules
 	depends = glibc
 	depends = libstdc++
 	depends = libx11
