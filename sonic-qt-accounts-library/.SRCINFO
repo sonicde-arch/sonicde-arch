@@ -1,0 +1,21 @@
+pkgbase = sonic-qt-accounts-library
+	pkgdesc = Qt-based client library for accessing the online accounts database
+	pkgver = 1.17
+	pkgrel = 1
+	url = https://github.com/Sonic-DE/sonic-qt-accounts-library
+	arch = x86_64
+	groups = sonicde
+	license = LGPL-2.1-only
+	makedepends = cmake
+	depends = glib2
+	depends = glibc
+	depends = libaccounts-glib
+	depends = libgcc
+	depends = libstdc++
+	depends = qt6-base
+	provides = libaccounts-qt
+	conflicts = libaccounts-qt
+	source = sonic-qt-accounts-library-1.17.tar.gz::https://github.com/Sonic-DE/sonic-qt-accounts-library/archive/refs/tags/1.17.tar.gz
+	sha256sums = cf622eee8f29e1190e7e781d5cb3a67ea56a324eb755e7ee76b5d71855f71e36
+
+pkgname = sonic-qt-accounts-library
