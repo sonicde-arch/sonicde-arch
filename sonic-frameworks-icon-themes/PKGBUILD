@@ -5,7 +5,7 @@
 
 pkgname=sonic-frameworks-icon-themes
 pkgver=6.30.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Support for icon themes'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-frameworks-icon-themes'
@@ -22,8 +22,8 @@ depends=(
 	'sonic-frameworks-color-scheme'
 	'sonic-frameworks-internationalization'
 	'sonic-frameworks-settings'
-	'sonic-frameworks-silver-icons'
 	'sonic-frameworks-widgets-addons'
+	'sonic-silver-icons'
 )
 makedepends=(
 	'doxygen'
