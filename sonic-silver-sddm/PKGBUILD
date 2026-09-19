@@ -1,7 +1,7 @@
 # Maintainer: callmetango
 
 pkgname=sonic-silver-sddm
-pkgver=1.0.0
+pkgver=1.1.0
 pkgrel=1
 pkgdesc="Sonic Silver SDDM Theme"
 arch=('any')
@@ -17,7 +17,7 @@ depends=(
 makedepends=('sonic-frameworks-cmake-modules')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('2728a0ec2b53b8ffa3bfc83b7312c2b23c5e85d6cee39977db34bf1888650c13')
+sha256sums=('7af2afea4e7724bafe7e7cb37ad07bc0f523bad1cef774680ef9163adb97a0d0')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver"
