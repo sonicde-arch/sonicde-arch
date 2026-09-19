@@ -2,18 +2,17 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Felix Yan <felixonmars@archlinux.org>
 
-pkgbase=sonic-pyside-setup
+pkgbase=sonic-pyside
 pkgname=(
 	'sonic-pyside6'
 	'sonic-pyside6-tools'
 	'sonic-shiboken6'
 	'sonic-shiboken6-generator'
 )
-_pkgname=sonic-pyside-setup
 pkgver=6.11.2.1
 pkgrel=1
 arch=('x86_64')
-url='https://github.com/Sonic-DE/sonic-pyside-setup'
+url='https://github.com/Sonic-DE/sonic-pyside'
 license=(
 	'GPL-3.0-only'
 	'LGPL-3.0-only'
@@ -54,14 +53,14 @@ makedepends=(
 	'qt6-webview'
 )
 groups=('sonicde')
-source=("$_pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+source=("$pkgbase-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 sha256sums=('41e0e6fbea0a15c0aa7f16c087b27defb4c1d16acf1aa70b21bc89f7dd0cd2ea')
 
 _install_egg_info() (
 	export PATH="/usr/lib/qt6/bin:$PATH"
 	local _platlib
 
-	cd "$_pkgname-$pkgver"
+	cd "$pkgbase-$pkgver"
 	python setup.py egg_info --build-type="$1"
 	_platlib=$(
 		python -c 'import sysconfig; print(sysconfig.get_path("platlib"))'
@@ -70,7 +69,7 @@ _install_egg_info() (
 )
 
 build() {
-	cmake -B build -S "$_pkgname-$pkgver" -G Ninja \
+	cmake -B build -S "$pkgbase-$pkgver" -G Ninja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=None \
 		-DSHIBOKEN_PYTHON_LIBRARIES="$(pkgconf python3-embed --libs)" \
