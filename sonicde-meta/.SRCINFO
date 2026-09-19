@@ -36,7 +36,6 @@ pkgbase = sonicde-meta
 	depends = sonic-pipewire
 	depends = sonic-polkit-agent
 	depends = sonic-qt-theme-bridge
-	depends = sonic-rdp-server
 	depends = sonic-screen
 	depends = sonic-screenies
 	depends = sonic-screenlocker
