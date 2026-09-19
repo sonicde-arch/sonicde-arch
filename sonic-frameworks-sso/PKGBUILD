@@ -4,7 +4,7 @@
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
 
 pkgname=sonic-frameworks-sso
-pkgver=8.61.2
+pkgver=8.61.2.1
 pkgrel=1
 pkgdesc='A D-Bus service which performs user authentication on behalf of its clients'
 arch=('x86_64')
@@ -25,7 +25,7 @@ provides=('signond')
 conflicts=('signond')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('5cebeff220471f43da15be393fe26487d73568960bf1fbb130add0aabf65fdbe')
+sha256sums=('f1bd69e48bed8e013a4994ef7ddbff0ec96a82a17cb8ec4619e8e3e236d7a30d')
 
 build() {
 	cmake -B build -S "$pkgbase-$pkgver" \
