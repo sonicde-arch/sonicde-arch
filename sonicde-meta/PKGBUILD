@@ -41,7 +41,6 @@ depends=(
 	'sonic-pipewire'
 	'sonic-polkit-agent'
 	'sonic-qt-theme-bridge'
-	'sonic-rdp-server'
 	'sonic-screen'
 	'sonic-screenies'
 	'sonic-screenlocker'
