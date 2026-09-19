@@ -1,13 +1,14 @@
 pkgbase = xdg-desktop-portal-sonicde
 	pkgdesc = X11 backend for xdg-desktop-portal using SonicDE and Qt
 	pkgver = 6.7.5.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/xdg-desktop-portal-sonicde
 	arch = x86_64
 	groups = sonicde
 	license = LGPL-2.0-or-later
 	makedepends = sonic-frameworks-cmake-modules
 	depends = glibc
+	depends = libei
 	depends = libstdc++
 	depends = libxkbcommon
 	depends = qt6-base
