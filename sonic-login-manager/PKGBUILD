@@ -45,7 +45,6 @@ sha256sums=('e289484c7ba29da4f7f2305930734172bde3fe33da59bbd9ac7d72fa23eaba2a')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
 		-DDBUS_CONFIG_FILENAME=plasma_org.freedesktop.DisplayManager.conf
 	cmake --build build
 }

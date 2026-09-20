@@ -61,8 +61,7 @@ sha256sums=('1099c7c3df53c18290671a650a41ad9fa748df86a919171753ec26f66421dbc4')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
-		-DBUILD_TESTING=OFF \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib
+		-DBUILD_TESTING=OFF
 	cmake --build build
 }
 
