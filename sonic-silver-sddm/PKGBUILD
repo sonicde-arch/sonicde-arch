@@ -15,6 +15,7 @@ depends=(
 	'sonic-workspace'
 )
 makedepends=('sonic-frameworks-cmake-modules')
+options=('!debug')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 sha256sums=('7af2afea4e7724bafe7e7cb37ad07bc0f523bad1cef774680ef9163adb97a0d0')
