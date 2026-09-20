@@ -75,3 +75,4 @@ optdepends=(
 )
 provides=('plasma-meta')
 conflicts=('plasma-meta')
+options=('!debug')
