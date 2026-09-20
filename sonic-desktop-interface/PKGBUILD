@@ -116,7 +116,6 @@ prepare() {
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
 		-DBUILD_KCM_MOUSE_EVDEV=ON \
 		-DBUILD_KCM_TOUCHPAD_SYNAPTICS=ON \
 		-DBUILD_TESTING=OFF

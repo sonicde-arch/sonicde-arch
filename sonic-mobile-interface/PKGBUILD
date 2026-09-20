@@ -69,8 +69,7 @@ source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 sha256sums=('1aa6a2bf129472e3ae216a076ac71873a759b6cdc4aa3487bf55b7213d20554e')
 
 build() {
-	cmake -B build -S "$pkgname-$pkgver" \
-		-D CMAKE_INSTALL_LIBEXECDIR=lib
+	cmake -B build -S "$pkgname-$pkgver"
 	cmake --build build
 }
 
