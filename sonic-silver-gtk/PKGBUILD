@@ -17,6 +17,7 @@ makedepends=(
 )
 provides=('breeze-gtk')
 conflicts=('breeze-gtk')
+options=('!debug')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 sha256sums=('9a489dc86770d01acf513526e515b003cf041baa8196b43f354348a35c260901')
