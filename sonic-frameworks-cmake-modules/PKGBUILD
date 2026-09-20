@@ -23,6 +23,7 @@ optdepends=(
 )
 provides=('extra-cmake-modules')
 conflicts=('extra-cmake-modules')
+options=('!debug')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 sha256sums=('e39f62a1fc0e58ddc36612ddcc850e4ef7f6b59db68b38d4573bf150ed1633cb')
