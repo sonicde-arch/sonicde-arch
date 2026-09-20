@@ -10,6 +10,7 @@ pkgbase = sonic-oxygen-icons
 	makedepends = sonic-frameworks-cmake-modules
 	provides = oxygen-icons
 	conflicts = oxygen-icons
+	options = !debug
 	source = sonic-oxygen-icons-6.30.0.tar.gz::https://github.com/Sonic-DE/sonic-oxygen-icons/archive/refs/tags/6.30.0.tar.gz
 	sha256sums = 5e88a696c632001c21850cadd56fcf5b681cd77d1f25a27d9ae96632f1e4c634
 
