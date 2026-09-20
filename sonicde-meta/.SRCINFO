@@ -67,5 +67,6 @@ pkgbase = sonicde-meta
 	optdepends = sonic-workspace-wallpapers: Additional wallpapers
 	provides = plasma-meta
 	conflicts = plasma-meta
+	options = !debug
 
 pkgname = sonicde-meta
