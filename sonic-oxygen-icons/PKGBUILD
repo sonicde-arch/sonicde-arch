@@ -21,6 +21,7 @@ makedepends=(
 )
 provides=('oxygen-icons')
 conflicts=('oxygen-icons')
+options=('!debug')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 sha256sums=('5e88a696c632001c21850cadd56fcf5b681cd77d1f25a27d9ae96632f1e4c634')
