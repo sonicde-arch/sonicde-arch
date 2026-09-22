@@ -1,6 +1,6 @@
 pkgbase = sonic-workspace
 	pkgdesc = SonicDE workspace components
-	pkgver = 6.7.5.1
+	pkgver = 6.7.5.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-workspace
 	arch = x86_64
@@ -122,7 +122,7 @@ pkgbase = sonic-workspace
 	conflicts = plasma-x11-session
 	conflicts = sonic-x11-session
 	replaces = sonic-x11-session
-	source = sonic-workspace-6.7.5.1.tar.gz::https://github.com/Sonic-DE/sonic-workspace/archive/refs/tags/6.7.5.1.tar.gz
-	sha256sums = a41ca259bce4cf43ece682e3cfaf9f433f66c15059970ac76f66dbc99c70bd39
+	source = sonic-workspace-6.7.5.2.tar.gz::https://github.com/Sonic-DE/sonic-workspace/archive/refs/tags/6.7.5.2.tar.gz
+	sha256sums = a1637e64f7ba5cccef476cc8fba845fea029130ef28995f04a7f82a1bf2ffcfe
 
 pkgname = sonic-workspace
