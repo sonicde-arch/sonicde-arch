@@ -2,6 +2,8 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonicde-meta
 pkgver=6.7
 pkgrel=1
@@ -28,7 +30,6 @@ depends=(
 	'sonic-dr-robotnik'
 	'sonic-ecco'
 	'sonic-file-search-ui'
-	'sonic-firewall'
 	'sonic-frameworks-keyring-pam'
 	'sonic-gtk-theme-bridge'
 	'sonic-keybind-daemon'
@@ -61,6 +62,7 @@ depends=(
 	'union'
 	'xdg-desktop-portal-sonicde'
 )
+((USE_SYSTEMD)) && depends+=('sonic-firewall')
 optdepends=(
 	'breeze-grub: Breeze theme for GRUB'
 	'breeze-plymouth: Breeze theme for Plymouth'

@@ -17,6 +17,7 @@ depends=(
 	'libnl'
 	'libpcap'
 	'libstdc++'
+	'libudev.so'
 	'lm_sensors'
 	'qt6-base'
 	'qt6-declarative'
@@ -32,9 +33,9 @@ depends=(
 	'sonic-frameworks-quick-charts'
 	'sonic-frameworks-quick-ui'
 	'sonic-frameworks-settings'
-	'systemd-libs'
 )
 makedepends=(
+	'libcap'
 	'qt6-tools'
 	'sonic-frameworks-cmake-modules'
 )

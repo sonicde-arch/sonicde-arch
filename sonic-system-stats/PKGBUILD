@@ -1,6 +1,8 @@
 # Maintainer: callmetango
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-system-stats
 pkgver=6.7.5
 pkgrel=1
@@ -10,7 +12,9 @@ url='https://github.com/Sonic-DE/sonic-system-stats'
 license=('LGPL-2.0-or-later')
 depends=(
 	'glibc'
+	'libnl'
 	'libstdc++'
+	'libudev.so'
 	'lm_sensors'
 	'qt6-base'
 	'sonic-frameworks-core-addons'
@@ -18,17 +22,13 @@ depends=(
 	'sonic-frameworks-device-integration'
 	'sonic-frameworks-internationalization'
 	'sonic-frameworks-io'
+	'sonic-frameworks-networkmanager'
 	'sonic-system-monitor-library'
 )
-makedepends=(
-	'libnl'
-	'sonic-frameworks-cmake-modules'
-	'sonic-frameworks-networkmanager'
-)
-optdepends=(
-	'libnl: network usage monitor'
-	'systemd-libs: GPU monitor'
-	'sonic-frameworks-networkmanager: network usage monitor'
+makedepends=('sonic-frameworks-cmake-modules')
+((USE_SYSTEMD)) || optdepends+=(
+	'esettingsd: hostname1 service for system information on dinit, runit or s6'
+	'openrc-settingsd: hostname1 service for system information on OpenRC'
 )
 provides=('ksystemstats')
 conflicts=('ksystemstats')

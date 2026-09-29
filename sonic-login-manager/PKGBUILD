@@ -1,6 +1,8 @@
 # Maintainer: callmetango
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-login-manager
 pkgver=6.7.5.2
 pkgrel=1
@@ -30,12 +32,17 @@ depends=(
 	'sonic-interface-libraries'
 	'sonic-screen-library'
 	'sonic-workspace'
-	'systemd-libs'
 	'xorg-server'
 )
+((USE_SYSTEMD)) && depends+=('systemd')
+((USE_SYSTEMD)) || depends+=('elogind')
 makedepends=(
 	'qt6-tools'
 	'sonic-frameworks-cmake-modules'
+)
+((USE_SYSTEMD)) || optdepends+=(
+	'esettingsd: locale1 service for keyboard defaults on dinit, runit or s6'
+	'openrc-settingsd: locale1 service for keyboard defaults on OpenRC'
 )
 provides=('plasma-login-manager')
 conflicts=('plasma-login-manager')
@@ -45,6 +52,7 @@ sha256sums=('941987ecdcbf97d10ba0f57cbfd01175a61e756d1a861c3aaf4e053cbfba1964')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
+		-DMANUAL_INITS:BOOL="$((!USE_SYSTEMD))" \
 		-DDBUS_CONFIG_FILENAME=plasma_org.freedesktop.DisplayManager.conf
 	cmake --build build
 }

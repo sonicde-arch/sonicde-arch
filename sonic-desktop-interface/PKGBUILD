@@ -3,6 +3,8 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-desktop-interface
 pkgver=6.7.5.2
 pkgrel=1
@@ -15,6 +17,7 @@ depends=(
 	'glibc'
 	'libcanberra'
 	'libstdc++'
+	'libudev.so'
 	'libwacom'
 	'libx11'
 	'libxcb'
@@ -69,7 +72,6 @@ depends=(
 	'sonic-polkit-agent'
 	'sonic-system-monitor-library'
 	'sonic-workspace'
-	'systemd-libs'
 	'systemsettings'
 	'xcb-util-keysyms'
 	'xdg-user-dirs'
@@ -98,6 +100,11 @@ makedepends=(
 	'xf86-input-libinput'
 	'xf86-input-synaptics'
 	'xorg-server-devel'
+)
+((USE_SYSTEMD)) || optdepends+=(
+	'elogind: login1 D-Bus service'
+	'esettingsd: timedate1 D-Bus service for dinit, runit or s6'
+	'openrc-settingsd: timedate1 D-Bus service for OpenRC'
 )
 provides=('plasma-desktop')
 conflicts=('plasma-desktop')

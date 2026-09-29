@@ -17,23 +17,21 @@ depends=(
 	'glibc'
 	'libgcc'
 	'libstdc++'
+	'libudev.so'
+	'python'
 	'qt6-base'
-	'systemd-libs'
+	'qt6-declarative'
+	'sonic-pyside6'
+	'sonic-shiboken6'
 	'util-linux-libs'
 )
 makedepends=(
 	'doxygen'
 	'python-build'
 	'python-setuptools'
-	'qt6-declarative'
 	'qt6-tools'
 	'sonic-frameworks-cmake-modules'
-	'sonic-pyside6'
 	'sonic-shiboken6-generator'
-)
-optdepends=(
-	'qt6-declarative: QML bindings'
-	'sonic-pyside6: Python bindings'
 )
 provides=('kcoreaddons')
 conflicts=('kcoreaddons')

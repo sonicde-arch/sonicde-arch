@@ -3,6 +3,8 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-bluetooth-runtime
 pkgver=6.7.5
 pkgrel=1
@@ -39,6 +41,9 @@ makedepends=(
 optdepends=(
 	'bluez-obex: file transfer'
 	'pulseaudio-bluetooth: to connect to A2DP profile'
+)
+((USE_SYSTEMD)) || optdepends+=(
+	'elogind: sleep and resume notifications through login1'
 )
 provides=('bluedevil')
 conflicts=('bluedevil')

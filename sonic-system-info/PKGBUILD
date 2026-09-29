@@ -21,6 +21,7 @@ depends=(
 	'libdrm'
 	'libpulse' # pactl
 	'libstdc++'
+	'libudev.so'
 	'libusb'
 	'lm_sensors'
 	'mesa-utils'
@@ -37,7 +38,6 @@ depends=(
 	'sonic-frameworks-quick-ui'
 	'sonic-frameworks-settings'
 	'sonic-frameworks-settings-utils'
-	'systemd-libs'
 	'systemsettings'
 	'vulkan-tools'
 	'wayland-utils'

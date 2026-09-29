@@ -3,6 +3,8 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-win
 pkgver=6.7.5.3
 pkgrel=1
@@ -26,6 +28,8 @@ depends=(
 	'libxi'
 	'libxkbcommon'
 	'libxkbcommon-x11'
+	'mesa'
+	'qt6-base'
 	'qt6-declarative'
 	'qt6-sensors'
 	'qt6-svg'
@@ -58,7 +62,6 @@ depends=(
 	'sonic-night-light'
 	'sonic-screenlocker'
 	'sonic-silver'
-	'systemd-libs'
 	'xcb-util-cursor'
 	'xcb-util-keysyms'
 	'xcb-util-wm'
@@ -67,6 +70,11 @@ makedepends=(
 	'python'
 	'sonic-frameworks-cmake-modules'
 	'sonic-frameworks-doctools'
+)
+((USE_SYSTEMD)) || optdepends=(
+	'elogind: login1 session management'
+	'esettingsd: locale1 service for dinit, runit or s6'
+	'openrc-settingsd: locale1 service for OpenRC'
 )
 provides=('kwin-x11')
 conflicts=('kwin-x11')

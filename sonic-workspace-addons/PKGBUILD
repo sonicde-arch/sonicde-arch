@@ -3,6 +3,8 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-workspace-addons
 pkgver=6.7.5
 pkgrel=1
@@ -48,7 +50,6 @@ depends=(
 	'sonic-interface-libraries'
 	'sonic-win'
 	'sonic-workspace'
-	'systemd-libs'
 )
 makedepends=(
 	'qt6-webengine'
@@ -59,6 +60,9 @@ optdepends=(
 	'qt6-webengine: dictionary and webbrowser applets'
 	'quota-tools: disk quota applet'
 	'sonic-frameworks-networkmanager: POTD wallpaper'
+)
+((USE_SYSTEMD)) || optdepends+=(
+	'elogind: login1 sleep and resume notifications'
 )
 provides=('kdeplasma-addons')
 conflicts=('kdeplasma-addons')

@@ -1,6 +1,8 @@
 # Maintainer: callmetango
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-frameworks-io-fuse
 pkgver=6.0.0
 pkgrel=2
@@ -17,6 +19,9 @@ depends=(
 	'sonic-frameworks-io'
 )
 makedepends=('sonic-frameworks-cmake-modules')
+((USE_SYSTEMD)) || optdepends=(
+	'etmpfiles: honor the kio-fuse tmpfiles cleanup exclusion'
+)
 provides=('kio-fuse')
 conflicts=('kio-fuse')
 groups=('sonicde-frameworks')

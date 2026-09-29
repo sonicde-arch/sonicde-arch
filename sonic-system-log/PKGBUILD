@@ -3,6 +3,8 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-system-log
 pkgver=26.08.0
 pkgrel=1
@@ -31,8 +33,8 @@ depends=(
 	'sonic-frameworks-text-widgets'
 	'sonic-frameworks-widgets-addons'
 	'sonic-frameworks-xml-gui'
-	'systemd-libs'
 )
+((USE_SYSTEMD)) && depends+=('systemd-libs')
 makedepends=(
 	'sonic-frameworks-cmake-modules'
 	'sonic-frameworks-doctools'
@@ -48,6 +50,7 @@ sha256sums=('94655fd8570d6ff52ca37e08997d642365a23c430aa178e388aaef48a400258c')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
+		-DCMAKE_DISABLE_FIND_PACKAGE_Journald:BOOL="$((!USE_SYSTEMD))" \
 		-DBUILD_TESTING=OFF
 	cmake --build build
 }
