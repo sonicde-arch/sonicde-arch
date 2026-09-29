@@ -46,7 +46,6 @@ pkgbase = sonic-workspace-addons
 	depends = sonic-interface-libraries
 	depends = sonic-win
 	depends = sonic-workspace
-	depends = systemd-libs
 	optdepends = qt6-webengine: dictionary and webbrowser applets
 	optdepends = quota-tools: disk quota applet
 	optdepends = sonic-frameworks-networkmanager: POTD wallpaper
