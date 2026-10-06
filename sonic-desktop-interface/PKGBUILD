@@ -68,9 +68,9 @@ depends=(
 	'sonic-plasma5-support-library'
 	'sonic-polkit-agent'
 	'sonic-system-monitor-library'
+	'sonic-system-settings'
 	'sonic-workspace'
 	'systemd-libs'
-	'systemsettings'
 	'xcb-util-keysyms'
 	'xdg-user-dirs'
 )

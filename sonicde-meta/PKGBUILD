@@ -49,6 +49,7 @@ depends=(
 	'sonic-ssh-password-prompt'
 	'sonic-system-info'
 	'sonic-system-monitor'
+	'sonic-system-settings'
 	'sonic-system-stats'
 	'sonic-terminal'
 	'sonic-terminal-tools'
@@ -57,7 +58,6 @@ depends=(
 	'sonic-welcome-center'
 	'sonic-workspace-addons'
 	'sonic-write-daemon'
-	'systemsettings'
 	'union'
 	'xdg-desktop-portal-sonicde'
 )

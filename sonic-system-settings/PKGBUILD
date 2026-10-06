@@ -3,64 +3,51 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
-pkgname=sonic-system-info
+pkgname=sonic-system-settings
 pkgver=6.7.5
 pkgrel=1
-pkgdesc='A utility that provides information about a computer system'
+pkgdesc='SonicDE system manager for hardware, software, and workspaces'
 arch=('x86_64')
-url='https://github.com/Sonic-DE/sonic-system-info'
+url='https://github.com/Sonic-DE/sonic-system-settings'
 license=('LGPL-2.0-or-later')
 depends=(
-	'aha'
-	'clinfo'
-	'dmidecode'
 	'glibc'
-	'glu'
-	'iproute2' # ip
-	'libdisplay-info'
-	'libdrm'
-	'libpulse' # pactl
 	'libstdc++'
-	'libusb'
-	'lm_sensors'
-	'mesa-utils'
 	'qt6-base'
 	'qt6-declarative'
-	'sh'
+	'sonic-activities'
 	'sonic-frameworks-app-info'
 	'sonic-frameworks-auth'
+	'sonic-frameworks-color-scheme'
 	'sonic-frameworks-core-addons'
-	'sonic-frameworks-device-integration'
+	'sonic-frameworks-crash-handler'
+	'sonic-frameworks-data-models'
+	'sonic-frameworks-data-views'
+	'sonic-frameworks-dbus'
 	'sonic-frameworks-internationalization'
 	'sonic-frameworks-io'
-	'sonic-frameworks-qml-bridge'
+	'sonic-frameworks-progress-ui'
 	'sonic-frameworks-quick-ui'
+	'sonic-frameworks-runner'
 	'sonic-frameworks-settings'
+	'sonic-frameworks-settings-ui'
 	'sonic-frameworks-settings-utils'
-	'sonic-system-settings'
-	'systemd-libs'
-	'vulkan-tools'
-	'wayland-utils'
-	'xorg-xdpyinfo'
+	'sonic-frameworks-widgets-addons'
+	'sonic-frameworks-windowsystem'
+	'sonic-frameworks-xml-gui'
 )
 makedepends=(
-	'fwupd'
 	'sonic-frameworks-cmake-modules'
 	'sonic-frameworks-doctools'
-	'vulkan-headers'
 )
-optdepends=(
-	'fwupd: firmware security module'
-	'sonic-disks: SMART devices health monitor'
-)
-provides=('kinfocenter')
-conflicts=('kinfocenter')
+provides=('systemsettings')
+conflicts=('systemsettings')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('1099c7c3df53c18290671a650a41ad9fa748df86a919171753ec26f66421dbc4')
+sha256sums=('dd0b9641c04e5118275d46cd725bc8df5536cd6abfe8dbe5d429cb91eb11373b')
 
 build() {
-	cmake -B build -S "$pkgname-$pkgver" \
+	cmake -B build  -S $pkgname-$pkgver \
 		-DBUILD_TESTING=OFF
 	cmake --build build
 }
