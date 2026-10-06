@@ -64,12 +64,12 @@ depends=(
 optdepends=(
 	'breeze-grub: Breeze theme for GRUB'
 	'breeze-plymouth: Breeze theme for Plymouth'
-	'kgamma: Adjust gamma settings on X'
 	'plasma-sdk: Development tools'
 	'plymouth-kcm: Configure Plymouth from systemsettings'
 	'sddm-kcm: SDDM configuration module'
-	'sonic-drawing-tablet: Drawing tablet settings on X'
 	'sonic-breeze: Breeze theme for SonicDE'
+	'sonic-drawing-tablet: Drawing tablet settings on X'
+	'sonic-gamma: Adjust gamma settings on X'
 	'sonic-silver-sddm: SDDM silver theme'
 	'sonic-workspace-wallpapers: Additional wallpapers'
 )
