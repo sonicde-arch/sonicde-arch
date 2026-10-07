@@ -3,7 +3,7 @@
 
 pkgname=sonic-frameworks-quick-ui-addons
 pkgver=1.13.1
-pkgrel=2
+pkgrel=3
 pkgdesc='Add-ons for the Sonic Quick UI framework'
 url='https://github.com/Sonic-DE/sonic-frameworks-quick-ui-addons'
 arch=('x86_64')
