@@ -3,7 +3,7 @@
 
 pkgname=xdg-desktop-portal-sonicde
 pkgver=6.7.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc='X11 backend for xdg-desktop-portal using SonicDE and Qt'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/xdg-desktop-portal-sonicde'
