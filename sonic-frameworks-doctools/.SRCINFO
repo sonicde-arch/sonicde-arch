@@ -1,7 +1,7 @@
 pkgbase = sonic-frameworks-doctools
 	pkgdesc = Documentation generation from docbook
 	pkgver = 6.30.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-frameworks-doctools
 	arch = x86_64
 	groups = sonicde-frameworks

@@ -1,7 +1,7 @@
 pkgbase = sonic-frameworks-idle-tracker
 	pkgdesc = X11 user activity monitoring framework for SonicDE
 	pkgver = 6.30.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-frameworks-idle-tracker
 	arch = x86_64
 	groups = sonicde-frameworks

@@ -1,7 +1,7 @@
 pkgbase = sonic-activities-stats
 	pkgdesc = A library for accessing the usage data collected by the activities system
 	pkgver = 6.7.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-activities-stats
 	arch = x86_64
 	groups = sonicde

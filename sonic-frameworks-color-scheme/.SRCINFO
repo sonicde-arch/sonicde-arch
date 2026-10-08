@@ -1,7 +1,7 @@
 pkgbase = sonic-frameworks-color-scheme
 	pkgdesc = Classes to read and interact with KColorScheme
 	pkgver = 6.30.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-frameworks-color-scheme
 	arch = x86_64
 	groups = sonicde-frameworks

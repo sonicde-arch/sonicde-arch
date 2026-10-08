@@ -1,7 +1,7 @@
 pkgbase = sonic-frameworks-cmake-modules
 	pkgdesc = Extra modules and scripts for CMake
 	pkgver = 6.30.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-frameworks-cmake-modules
 	arch = any
 	groups = sonicde-frameworks

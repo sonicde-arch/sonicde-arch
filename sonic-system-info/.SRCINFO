@@ -1,7 +1,7 @@
 pkgbase = sonic-system-info
 	pkgdesc = A utility that provides information about a computer system
 	pkgver = 6.7.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-system-info
 	arch = x86_64
 	groups = sonicde

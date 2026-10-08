@@ -1,7 +1,7 @@
 pkgbase = sonic-frameworks-windowsystem
 	pkgdesc = Access to the windowing system
 	pkgver = 6.30.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-frameworks-windowsystem
 	arch = x86_64
 	groups = sonicde-frameworks

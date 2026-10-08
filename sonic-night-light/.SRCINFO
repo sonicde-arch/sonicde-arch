@@ -1,7 +1,7 @@
 pkgbase = sonic-night-light
 	pkgdesc = Helpers for scheduling the dark-light cycle
 	pkgver = 6.7.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-night-light
 	arch = x86_64
 	groups = sonicde

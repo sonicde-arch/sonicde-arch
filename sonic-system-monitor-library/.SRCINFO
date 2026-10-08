@@ -1,7 +1,7 @@
 pkgbase = sonic-system-monitor-library
 	pkgdesc = Library to retrieve information on the current status of computer hardware
 	pkgver = 6.7.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-system-monitor-library
 	arch = x86_64
 	groups = sonicde

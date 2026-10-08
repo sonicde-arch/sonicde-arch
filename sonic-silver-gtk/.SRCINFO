@@ -1,7 +1,7 @@
 pkgbase = sonic-silver-gtk
 	pkgdesc = Silver widget theme for GTK 2 and 3
 	pkgver = 6.7.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-silver-gtk
 	arch = any
 	groups = sonicde

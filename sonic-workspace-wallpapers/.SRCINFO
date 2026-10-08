@@ -1,7 +1,7 @@
 pkgbase = sonic-workspace-wallpapers
 	pkgdesc = Additional wallpapers for the Sonic Workspace
 	pkgver = 6.7.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-workspace-wallpapers
 	arch = any
 	groups = sonicde

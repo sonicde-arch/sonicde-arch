@@ -1,7 +1,7 @@
 pkgbase = sonic-welcome-center
 	pkgdesc = SonicDE onboarding wizard with Silver defaults
 	pkgver = 6.7.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-welcome-center
 	arch = x86_64
 	groups = sonicde

@@ -1,7 +1,7 @@
 pkgbase = sonic-keybind-daemon
 	pkgdesc = Daemon providing Global Keyboard Shortcut (Accelerator) functionality
 	pkgver = 6.7.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-keybind-daemon
 	arch = x86_64
 	groups = sonicde

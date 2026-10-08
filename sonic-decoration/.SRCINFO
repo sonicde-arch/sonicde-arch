@@ -1,7 +1,7 @@
 pkgbase = sonic-decoration
 	pkgdesc = Plugin based library to create window decorations
 	pkgver = 6.7.5
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-decoration
 	arch = x86_64
 	groups = sonicde
