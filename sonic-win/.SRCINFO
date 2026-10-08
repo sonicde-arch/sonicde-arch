@@ -1,7 +1,7 @@
 pkgbase = sonic-win
 	pkgdesc = An easy to use, but flexible, X Window Manager
 	pkgver = 6.7.5.3
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-win
 	install = sonic-win.install
 	arch = x86_64
