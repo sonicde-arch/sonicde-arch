@@ -3,7 +3,7 @@
 
 pkgname=sonic-quick-image-editor
 pkgver=0.7.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc='QML image editing components with SonicDE defaults'
 license=('LGPL-2.1-or-later')
 arch=('x86_64')

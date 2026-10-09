@@ -3,7 +3,7 @@
 
 pkgname=sonic-frameworks-io-fuse
 pkgver=6.0.0
-pkgrel=2
+pkgrel=3
 arch=('x86_64')
 pkgdesc='FUSE interface for sonic-frameworks-io'
 url='https://github.com/Sonic-DE/sonic-frameworks-io-fuse'

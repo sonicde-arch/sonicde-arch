@@ -5,7 +5,7 @@
 
 pkgname=sonic-bluetooth-runtime
 pkgver=6.7.5
-pkgrel=2
+pkgrel=3
 pkgdesc='Integrate Bluetooth within SonicDE components'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-bluetooth-runtime'
