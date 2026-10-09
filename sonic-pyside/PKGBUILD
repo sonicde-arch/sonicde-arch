@@ -9,7 +9,7 @@ pkgname=(
 	'sonic-shiboken6'
 	'sonic-shiboken6-generator'
 )
-pkgver=6.11.2.1
+pkgver=6.11.2.2
 pkgrel=1
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-pyside'
@@ -54,7 +54,7 @@ makedepends=(
 )
 groups=('sonicde')
 source=("$pkgbase-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('41e0e6fbea0a15c0aa7f16c087b27defb4c1d16acf1aa70b21bc89f7dd0cd2ea')
+sha256sums=('db05b3a0b11b3c54958810ee3d1827bdc6935757b7e49e29a532c35ed3014255')
 
 _install_egg_info() (
 	export PATH="/usr/lib/qt6/bin:$PATH"
