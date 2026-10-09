@@ -4,6 +4,8 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 # Contributor: Alexey D. <lq07829icatm at rambler.ru>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-workspace
 pkgver=6.7.5.4
 pkgrel=1
@@ -25,6 +27,7 @@ depends=(
 	'libqalculate'
 	'libsm'
 	'libstdc++'
+	'libudev.so'
 	'libx11'
 	'libxau'
 	'libxcb'
@@ -99,7 +102,6 @@ depends=(
 	'sonic-system-stats'
 	'sonic-terminal-tools'
 	'sonic-win'
-	'systemd-libs'
 	'xcb-util'
 	'xcb-util-cursor'
 	'xcb-util-image'
@@ -108,6 +110,7 @@ depends=(
 	'xorg-xrdb'
 	'zlib'
 )
+((USE_SYSTEMD)) && depends+=('systemd-libs')
 makedepends=(
 	'qcoro'
 	'sonic-frameworks-cmake-modules'
@@ -115,6 +118,7 @@ makedepends=(
 	'sonic-frameworks-file-search'
 	'sonic-frameworks-networkmanager'
 )
+((USE_SYSTEMD)) && makedepends+=('systemd')
 optdepends=(
 	'appmenu-gtk-module: global menu support for some GTK3 applications'
 	'discover: manage applications installation from the launcher'
@@ -124,6 +128,11 @@ optdepends=(
 	'sonic-frameworks-networkmanager: IP based geolocation'
 	'sonic-workspace-wallpapers: additional wallpapers'
 	'xdg-desktop-portal-gtk: sync font settings to Flatpak apps'
+)
+((USE_SYSTEMD)) || optdepends+=(
+	'elogind: login1 service for session and power management'
+	'esettingsd: timedate1 and locale1 services for dinit, runit or s6'
+	'openrc-settingsd: timedate1 and locale1 services for OpenRC'
 )
 provides=(
 	'plasma-workspace'
@@ -137,12 +146,22 @@ conflicts=(
 )
 replaces=('sonic-x11-session')
 groups=('sonicde')
-source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('fc72311fc7f316b1a7306f17302d2df00bad36769e1bcf2adcb76bf14e4d8fb0')
+source=(
+	"$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
+	'build-systemd-option.patch'
+)
+sha256sums=('fc72311fc7f316b1a7306f17302d2df00bad36769e1bcf2adcb76bf14e4d8fb0'
+            '46d21bdb2347afe7ee313196f4296cfc91f4e16e68eca9f0da3dcae42663a63d')
+
+prepare() {
+	cd "$pkgname-$pkgver"
+	patch -Np1 < "$srcdir/build-systemd-option.patch"
+}
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
 		-DGLIBC_LOCALE_GEN=OFF \
+		-DBUILD_SYSTEMD="$USE_SYSTEMD" \
 		-DBUILD_TESTING=OFF
 	cmake --build build
 }

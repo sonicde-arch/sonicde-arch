@@ -1,6 +1,8 @@
 # Maintainer: callmetango
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-dr-robotnik
 pkgver=6.7.5
 pkgrel=2
@@ -37,9 +39,13 @@ depends=(
 	'sonic-frameworks-widgets-addons'
 	'sonic-frameworks-windowsystem'
 	'sonic-polkit'
-	'systemd-libs'
 )
+((USE_SYSTEMD)) && depends+=('systemd-libs')
 makedepends=('sonic-frameworks-cmake-modules')
+((USE_SYSTEMD)) || optdepends+=(
+	'esettingsd: hostname1 and timedate1 metadata for Sentry on dinit, runit or s6'
+	'openrc-settingsd: hostname1 and timedate1 metadata for Sentry on OpenRC'
+)
 provides=('drkonqi')
 conflicts=('drkonqi')
 groups=('sonicde')
@@ -49,7 +55,7 @@ sha256sums=('6c727e6c07704fd028c815cf2daa314693bfb52218cd3cf8792aef1f21976961')
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
 		-DBUILD_TESTING=OFF \
-		-DENABLE_SYSTEMD_COREDUMP=ON \
+		-DENABLE_SYSTEMD_COREDUMP:BOOL="$USE_SYSTEMD" \
 		-DWITH_PYTHON_VENDORING=OFF
 	cmake --build build
 }

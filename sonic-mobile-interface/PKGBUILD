@@ -2,6 +2,8 @@
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
 # Contributor: Devin Lin <devin@kde.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-mobile-interface
 pkgver=6.7.5
 pkgrel=1
@@ -14,6 +16,7 @@ depends=(
 	'glibc'
 	'libgcc'
 	'libstdc++'
+	'libudev.so'
 	'plasma-keyboard'
 	'plasma-nano'
 	'powerdevil'
@@ -51,7 +54,6 @@ depends=(
 	'sonic-screen-library'
 	'sonic-win'
 	'sonic-workspace'
-	'systemd-libs'
 )
 makedepends=(
 	'sonic-frameworks-cmake-modules'
@@ -61,6 +63,10 @@ optdepends=(
 	'plasma-settings: System settings'
 	'sonic-bluetooth-runtime: Bluetooth management'
 	'sonic-screen: Screen management'
+)
+((USE_SYSTEMD)) || optdepends+=(
+	'esettingsd: timedate1 service for dinit, runit or s6'
+	'openrc-settingsd: timedate1 service for OpenRC'
 )
 provides=('plasma-mobile')
 conflicts=('plasma-mobile')

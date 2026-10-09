@@ -17,8 +17,8 @@ depends=(
 	'glibc'
 	'libgcc'
 	'libstdc++'
+	'libudev.so'
 	'qt6-base'
-	'systemd-libs'
 	'util-linux-libs'
 )
 makedepends=(

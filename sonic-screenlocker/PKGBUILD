@@ -1,6 +1,8 @@
 # Maintainer: callmetango
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-screenlocker
 pkgver=6.7.5.1
 pkgrel=2
@@ -40,6 +42,9 @@ makedepends=(
 	'sonic-frameworks-cmake-modules'
 	'sonic-frameworks-doctools'
 )
+((USE_SYSTEMD)) || optdepends=(
+	'elogind: login1 session and sleep inhibition integration'
+)
 provides=('kscreenlocker')
 conflicts=('kscreenlocker')
 groups=('sonicde')
@@ -47,7 +52,7 @@ source=(
 	"$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
 	'kde.pam'
 	'kde-fingerprint.pam'
-    'kde-smartcard.pam'
+	'kde-smartcard.pam'
 )
 sha256sums=('9eccebf398238ee6970ed482761a9e2182d28baf739f91ecb3816da154f44182'
             'adba7bb7c27eb3a572e5e9d3cea0dbeebe59d3634472d1863d14fe892cb13b2b'
