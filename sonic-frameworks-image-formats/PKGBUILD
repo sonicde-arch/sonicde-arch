@@ -5,7 +5,7 @@
 
 pkgname=sonic-frameworks-image-formats
 pkgver=6.30.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Image format plugins for Qt 6'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-frameworks-image-formats'
@@ -51,7 +51,7 @@ build() {
 	cmake -B build -S "$pkgname-$pkgver" \
 		-DBUILD_TESTING=OFF \
 		-DKIMAGEFORMATS_HEIF=ON \
-		-DKIMAGEFORMATS_WITH_KNOWN_CRASHES_JXR=ON
+		-DKIMAGEFORMATS_WITH_KNOWN_CRASHES_JXR=OFF
 	cmake --build build
 }
 
