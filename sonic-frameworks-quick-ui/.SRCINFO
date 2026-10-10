@@ -1,7 +1,7 @@
 pkgbase = sonic-frameworks-quick-ui
 	pkgdesc = A QtQuick based components set
 	pkgver = 6.30.0
-	pkgrel = 1
+	pkgrel = 3
 	url = https://github.com/Sonic-DE/sonic-frameworks-quick-ui
 	arch = x86_64
 	groups = sonicde-frameworks
