@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-sso
 	pkgdesc = A D-Bus service which performs user authentication on behalf of its clients
-	pkgver = 8.61.2.1
+	pkgver = 8.61.2.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-sso
 	arch = x86_64
@@ -15,7 +15,7 @@ pkgbase = sonic-frameworks-sso
 	depends = qt6-base
 	provides = signond
 	conflicts = signond
-	source = sonic-frameworks-sso-8.61.2.1.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-sso/archive/refs/tags/8.61.2.1.tar.gz
-	sha256sums = f1bd69e48bed8e013a4994ef7ddbff0ec96a82a17cb8ec4619e8e3e236d7a30d
+	source = sonic-frameworks-sso-8.61.2.2.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-sso/archive/refs/tags/8.61.2.2.tar.gz
+	sha256sums = 0f2d2abfc6230e42965a95ae0100146c2a2cd8bc826e71ab31b9c8a58668bc93
 
 pkgname = sonic-frameworks-sso
