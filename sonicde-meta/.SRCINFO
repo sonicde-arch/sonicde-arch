@@ -1,7 +1,7 @@
 pkgbase = sonicde-meta
 	pkgdesc = Meta package to install SonicDE, an X11-focused fork of KDE
 	pkgver = 6.7
-	pkgrel = 2
+	pkgrel = 3
 	url = https://github.com/Sonic-DE
 	arch = any
 	license = None
@@ -62,5 +62,6 @@ pkgbase = sonicde-meta
 	optdepends = sonic-silver-sddm: SDDM silver theme
 	optdepends = sonic-workspace-wallpapers: Additional wallpapers
 	optdepends = wacomtablet: Drawing tablet settings on X
+	options = !debug
 
 pkgname = sonicde-meta
