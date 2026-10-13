@@ -1,144 +1,197 @@
 #!/bin/sh
-#
+
 # SPDX-License-Identifier: GPL-2.0-or-later
-# SPDX-FileCopyrightText: 2026 SonicDE Community
+# Copyright 2026 SonicDE Community
 
-# shellcheck disable=SC2009
-# shellcheck disable=SC2016
-set -e -u
+# shellcheck disable=SC2009,SC2016,SC2059,SC2086
 
-
-# Functions
-
-msg() {
-	printf "$1\n"
-}
-
-yesno() {
-	printf "$1 (y/n): " ; read -r _ANS
-	test "$_ANS" = 'y' -o "$_ANS" = 'Y'  && return 0
-}
-
-die() {
-	printf "$1\n" ; exit 1
-}
-
-thank_you() {
-	printf "$THANKS_MSG\n"
-	cd "$_OLDPWD"
-	exit 0
-}
+set -eu
 
 
 # Constants
 
-VERS='0.3.0'
-PGP_KEY='3B87898C73F11DF5'
-ORIG_URL='https://sonicde-arch.github.io'
-REPO_URL="$ORIG_URL/\$arch"
+VER='0.8.0'
+HOMEPAGE='https://sonicde.org'
+REPO_HOMEPAGE='https://sonicde-arch.github.io'
 
-THANKS_MSG="\nThank you for choosing SonicDE! Please see $ORIG_URL for any further information."
-_OLDPWD="$(pwd)"
+PGP_KEY_ID=3B87898C73F11DF5
+PGP_KEY_FILE=sonicde-archlinux.asc
+PGP_KEY_URL="$REPO_HOMEPAGE/$PGP_KEY_FILE"
 
-DL_CMD=
-test "$(command -v curl)" && DL_CMD='curl --remote-name'
-test "$(command -v wget)" && DL_CMD='wget --no-globber'
+BINPKG_REPOS="\
+stable
+stable-testing
+beta"
+REPO_NAME_TPL='sonicde-%s'
+REPO_URL_TPL='https://github.com/sonicde-arch/%s/releases/download/$arch'
 
-SUDO_CMD=
-test "$(command -v doas)" && SUDO_CMD='doas'
-test "$(command -v sudo)" && SUDO_CMD='sudo'
+KNOWN_LMS='emptty gdm greetd lemurs lightdm lxdm ly plasmalogin sddm slim soniclogin xdm'
+LOG=$HOME/sonic-switch.log
+NUL=/dev/null
+
+DISTRO_TYPE='Arch Linux based'
+OS_RELEASE_RE='^(ID=arch|ID_LIKE=.*arch)'
 
 
-# Pretext and Prechecks
+# Messages
 
-cat <<-EO_INTRO
-	SonicDE.org sonic-switch.sh, version: $VERS.
+CHOOSE_BINPKG_REPO_MSG='Please select the SonicDE repository you want to use:'
+FPRINT_MSG='Please compare the key fingerprint to the one at %s. Does it look right?'
+INTRO_MSG='SonicDE.org sonic-switch.sh, version: %s.
 
-	This script will install SonicDE on your Arch Linux system. It will restart your
-	graphical session so please save all your work. It will also silently replace the
-	conflicting KDE components with the SonicDE ones.
-EO_INTRO
+This script will install SonicDE on your system. It will restart your graphical session so please save all your work. It will also replace any conflicting KDE components with the SonicDE equivalents.
+'
+INSTALL_MSG='The installation of the SonicDE packages will start in %d seconds. It''s running in the background to continue in case your GUI session is getting terminated. You can find an installation log at %s.'
+LM_SWITCH_MSG='You''re currently using the `%s` login manager. SonicDE comes with the Sonic Login Manager which is highly recommended when migrating from Wayland-based setups. Do you want to switch to the Sonic Login Manager?'
+THANKS_MSG='Thank you for choosing SonicDE! Please see %s for any further information.'
 
-test "$DL_CMD" || die '\nNo `curl` or `wget` command found. Please install one.'
-test "$SUDO_CMD" || die '\nNo `doas` or `sudo` command found. Please install one.'
 
-# FIXME The test has to work on CachyOS, EndeavourOS, and all the other Arches.
-test "$(grep -i "^ID=['\"]*arch['\"]*$" /etc/os-release)" || die "$(cat <<-'EO_NOARCH'
+# Errors
 
-	This script only works on Arch Linux and its derivatives. Please see https://sonicde.org
-	for SonicDE packages suitable for other distributions and operating systems. Aborting.
-EO_NOARCH
-)"
+NO_CURL_WGET_ERR='No ''curl'' or ''wget'' command found. Please install one of them.'
+NO_DOAS_SUDO_ERR='No ''doas'' or ''sudo'' command found. Please install one of them.'
+DISTRO_ERR='This script only works on %s systems. Please see https://sonicde.org for SonicDE packages suitable for other distributions and operating systems. Aborting.'
+WRONG_FPRINT_ERR='Wrong fingerprint. Aborting.'
 
-yesno "\nAre you ready to switch to SonicDE?" || exit 0
+
+# Functions
+
+chooserepo() {
+	printf '%s\n' "$1"
+	printf '%s\n' "$2" | cut -d '|' -f 1 | grep -n '.*' | sed 's/:/) /g'
+	_max=$(printf '%s\n' "$2" | wc -l)
+	printf '0:exit script\n'
+	while :; do
+		IFS= read -r _choice || die 1 'Input closed.'
+		test "$_choice" = 0 && die 1 'Exiting.'
+		case $_choice in
+			''|*[!0-9]*) continue ;;
+			*) : ;;
+		esac
+		test $_choice -gt 0 -a $_choice -le $_max && break
+	done
+	printf '%s\n' "$2" | cut -d '|' -f 1 | sed -n "$_choice"p > repo
+}
+
+findloginman() {
+	_regex=$(printf '%s' "$KNOWN_LMS" | tr ' ' '|')
+	ps -A -o comm= | grep -E "^(${_regex})$" || :
+}
+
+msg() {
+	fstring=$1; shift
+	printf "\n$fstring\n" "$@"
+}
+
+yesno() {
+	fstring=$1; shift
+	printf "$fstring (y/n): " "$@"
+	read -r _answer
+	test "$_answer" = 'y' -o "$_answer" = 'Y' && return 0
+}
+
+die() {
+	rc=$1; fstring=$2; shift 2
+	printf "\n$fstring\n" "$@"
+	exit "$rc"
+}
+
+thank_you() {
+	printf "$THANKS_MSG\n" "$ORIG_URL"
+	exit 0
+}
+
+
+# Intro and Prechecks
+
+msg "$INTRO_MSG" "$VER"
+
+command -v curl >$NUL && fetch='curl --fail --location --remote-name'
+command -v wget >$NUL && fetch='wget --no-clobber'
+test -n "${fetch:-}" || die 1 "$NO_CURL_WGET_ERR"
+
+sudo=$(command -v sudo || command -v doas) || die 1 "$NO_DOAS_SUDO_ERR"
+grep -Eq "$OS_RELEASE_RE" /etc/os-release || die 1 "$DISTRO_ERR" "$DISTRO_TYPE"
+
+packey="$sudo pacman-key"
+pacinst="$sudo pacman --sync --needed"
+pkgs='sonicde-meta'
+slminst=
+
+yesno 'Are you ready to switch to SonicDE?' || exit 0
 
 
 # Main
 
-_WORKDIR="$(mktemp -d "${TMPDIR:-/tmp}"/sonic-switch.XXXXXXXX)"
-cd "$_WORKDIR" || die "\nCouldn't change into workdir ${_WORKDIR}."
+cd "$(mktemp -d)"
 
-set +e
-$SUDO_CMD pacman-key -l "$PGP_KEY" >/dev/null 2>pacman-key.err
-if [ "$(cat pacman-key.err)" ] ; then
-	set -e
-	msg '\nImporting the SonicDE for Arch Linux package signing key:'
-	$DL_CMD https://sonicde-arch.github.io/sonicde-archlinux.asc
-	sudo pacman-key --add sonicde-archlinux.asc
-	sudo pacman-key --finger "$PGP_KEY"
-	yesno "$(cat <<-EO_FPM
-		Please compare the key fingerprint to the one at $ORIG_URL.
-		Does it look right?
-EO_FPM
-)" || die '\nWrong fingerprint. Aborting.'
-	sudo pacman-key --lsign-key "$PGP_KEY"
+if ! $packey -l "$PGP_KEY_ID" >$NUL 2>&1 ; then
+	msg 'Importing the package signing key:'
+	$fetch "$PGP_KEY_URL"
+	$packey --add "$PGP_KEY_FILE"
+	$packey --finger "$PGP_KEY_ID"
+	yesno "$FPRINT_MSG" "$REPO_HOMEPAGE" || die 1 "$WRONG_FPRINT_ERR"
+	$packey --lsign-key "$PGP_KEY_ID"
 fi
 
-set +e
-RES="$(grep '^\[sonicde\]' /etc/pacman.conf)"
-if [ "$RES" ] ; then
-	msg '\The SonicDE repository is already in your pacman.conf. Proceeding.'
-else
-	set -e
-	msg '\nAdding the SonicDE repository to your `/etc/pacman.conf`:'
-	$SUDO_CMD tee -a /etc/pacman.conf <<-EO_REPO
+dbname=$(sed -En 's/^\[(sonicde.*)\]/\1/p' /etc/pacman.conf)
+if [ -z "$dbname" ] ; then
+	chooserepo "$CHOOSE_BINPKG_REPO_MSG" "$BINPKG_REPOS"
+	dbname=$(printf "$REPO_NAME_TPL" "$(cat repo)")
+	repourl=$(printf "$REPO_URL_TPL" "$(cat repo)")
+	msg 'Adding the SonicDE repository to your ''/etc/pacman.conf'':'
+	$sudo tee -a /etc/pacman.conf <<-EO_REPO
 
-	[sonicde]
-	Server = $REPO_URL
-EO_REPO
+		[$dbname]
+		Server = $repourl
+	EO_REPO
 fi
-set -e
 
 
-msg '\nUpdating your packages:'
-$SUDO_CMD pacman -Syyu
+msg 'Updating your system:'
+$pacinst --refresh --sysupgrade
 
-msg '\nInstalling SonicDE:'
-yes | $SUDO_CMD pacman -S --needed sonicde-meta
-
-
-## Login Manager Replacement
-
-set +e
-_RE="$(printf '%s' "$KNOWN_LMS" | tr ' ' '|')"
-LM_NAME="$(ps -A -o comm= | grep -E "^(${_RE})$")"
-
-test "$LM_NAME" = 'soniclogin' && thank_you
-yesno "$(cat <<-EO_LMSW
-
-	You're currently using the \`$LM_NAME\` login manager. Do you want to switch to the
-	Sonic Login Manager?
-EO_LMSW
-)" || thank_you
-
-set -e
-
-$SUDO_CMD pacman -S --needed --noconfirm sonic-login-manager
+if pacman -Qi $pkgs >$NUL 2>&1 ; then
+	msg 'Found an installation of SonicDE. Goood!'
+	die 0 "$THANKS_MSG" "$HOMEPAGE"
+fi
 
 
-msg "$THANKS_MSG"
-msg '\nSwitching to the Sonic Login Manager (soniclogin) in 3 seconds.'
-msg "You can find a log at ${_WORKDIR}/nohup.out."
-sleep 3
+msg 'Analyzing your login manager setup'
+lmname=$(findloginman)
+if [ -z "$lmname" ] ; then
+	msg 'Couldn''t identify your login manager. Keeping it.'
+elif [ "$lmname" != soniclogin ] && yesno "$LM_SWITCH_MSG" "$lmname" ; then
+	slminst=1
+fi
 
-nohup $SUDO_CMD sh -c "$SWITCH_CMD"
+msg 'Installing the dependencies of SonicDE:'
+$pacinst --print --print-format '%r %n' $pkgs > deps
+while read -r repo pkg; do
+	test "$repo" = "$dbname" && continue
+	extdeps="${extdeps:-} ${pkg}"
+done < deps
+test -n "${extdeps:-}" && $pacinst --asdeps --noconfirm $extdeps
+
+msg 'Downloading the SonicDE packages:'
+yes | $pacinst --downloadonly $pkgs
+
+msg 'Assembling the installation script'
+printf 'set -eu; yes | pacman --sync --needed %s\n' "$pkgs" > install.sh
+if [ "$slminst" = 1 ] ; then
+	cat >> install.sh <<-SLMINS
+		systemctl stop '$lmname'
+		yes | pacman --sync --needed sonic-login-manager
+		systemctl enable --force soniclogin
+		systemctl start soniclogin
+	SLMINS
+fi
+chmod a+x install.sh
+
+msg "$INSTALL_MSG" 3 "$LOG"
+msg "$THANKS_MSG" "$HOMEPAGE"
+
+: > "$LOG"
+$sudo systemd-run --on-active=3s --unit=sonic-switch \
+	/bin/sh -c "'$(pwd)'/install.sh >> '$LOG' 2>&1"
+tail -f "$LOG"
