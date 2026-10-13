@@ -6,6 +6,22 @@ This third-party repository provides [SonicDE](https://sonicde.org) x86_64 binar
 
 The packages of this repository are known to work with [Arch Linux](https://archlinux.org), [CachyOS](https://cachyos.org), [EndeavourOS](https://endeavouros.com), [Garuda Linux](https://garudalinux.org), and [RebornOS](https://rebornos.org). We'll also verify the functionality on [ArchCraft](https://archcraft.io) and the testing branch of [Manjaro Linux](https://manjaro.org).
 
+## Switching to SonicDE Automatically
+
+You can download and run the [`sonic-switch.sh`](sonic-switch.sh) script to automatically switch to SonicDE on your Arch-based system:
+
+```
+curl -O https://sonicde-arch.github.io/sonic-switch.sh
+sh sonic-switch.sh
+````
+
+You'll be asked to compare the fingerprint of the OpenPGP key used to sign the packages with this one:
+```text
+A85B B166 B49A 4C58 C391  2507 3B87 898C 73F1 1DF5
+```
+
+The script will restart your graphical session so please save all your work beforehand. It will also silently replace the conflicting KDE components with the SonicDE ones. During its run, you have the option to switch to the [Sonic Login Manager](https://github.com/Sonic-DE/sonic-login-manager) from your current one. This is highly recommended when migrating from a Wayland setup using the Plasma Login Manager. In case you don't get logged out automatically, please do so manually and log in again to start using SonicDE.
+
 ## Installing SonicDE Manually
 
 ### Adding the Public Package Signing Key to pacman
