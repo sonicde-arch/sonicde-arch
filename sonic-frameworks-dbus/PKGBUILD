@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-dbus
-pkgver=6.30.0
+pkgver=6.31.0
 pkgrel=1
 pkgdesc='Addons to QtDBus'
 arch=('x86_64')
@@ -27,7 +27,7 @@ provides=('kdbusaddons')
 conflicts=('kdbusaddons')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('761858dcfbb33a340a993d396cd7ac4faa8798fdffb701d2c86998147aae0f43')
+sha256sums=('6e2eb58dbba5e71460cba4165f2054ddc34580a0f3e694ef33dc0b1c10fd3be3')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
