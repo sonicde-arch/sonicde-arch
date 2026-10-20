@@ -1,7 +1,7 @@
 pkgbase = sonic-activities
 	pkgdesc = Core components for SonicDE Activities
-	pkgver = 6.7.5
-	pkgrel = 3
+	pkgver = 6.8.0
+	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-activities
 	arch = x86_64
 	groups = sonicde
@@ -19,7 +19,7 @@ pkgbase = sonic-activities
 	conflicts = kactivities
 	conflicts = plasma-activities
 	replaces = kactivities
-	source = sonic-activities-6.7.5.tar.gz::https://github.com/Sonic-DE/sonic-activities/archive/refs/tags/6.7.5.tar.gz
-	sha256sums = f47a3dae0a385f84ab3723d1ff32450ec55c444856bb35ebcb70a5c885f36947
+	source = sonic-activities-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-activities/archive/refs/tags/6.8.0.tar.gz
+	sha256sums = 4be195cbb97da1b1f57c0d90786ffd8df82a11700c8083a3901524c3a0f0d603
 
 pkgname = sonic-activities
