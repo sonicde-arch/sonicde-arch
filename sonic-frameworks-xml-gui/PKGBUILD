@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-xml-gui
-pkgver=6.30.0
+pkgver=6.31.0
 pkgrel=1
 pkgdesc='User configurable main windows'
 arch=('x86_64')
@@ -41,7 +41,7 @@ provides=('kxmlgui')
 conflicts=('kxmlgui')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('b2be2c09add5c148d7e417d9ff8650a56f43528a1040afc64f1921107a1b44f6')
+sha256sums=('28d7023c496a4ec2b6ad4c483a01f26b40484c39c7b0c99a29a729baef382b26')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
