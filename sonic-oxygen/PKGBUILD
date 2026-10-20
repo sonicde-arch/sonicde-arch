@@ -9,7 +9,7 @@ pkgname=(
 	'sonic-oxygen-cursors'
 )
 pkgdesc='SonicDE Oxygen style'
-pkgver=6.7.5
+pkgver=6.8.0
 pkgrel=1
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-oxygen'
@@ -42,7 +42,7 @@ provides=('oxygen')
 conflicts=('oxygen')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('935ee09912c5a13931378957e3a0cab4709739d3555ee229ff580502bb45d217')
+sha256sums=('e0a288e2bbbcd865779af9027ce112b95d05c235d80ad6cec95528677b0020f0')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
