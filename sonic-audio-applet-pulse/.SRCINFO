@@ -1,6 +1,6 @@
 pkgbase = sonic-audio-applet-pulse
 	pkgdesc = SonicDE applet for audio volume management using PulseAudio
-	pkgver = 6.8.0
+	pkgver = 6.7.5
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-audio-applet-pulse
 	arch = x86_64
@@ -33,7 +33,7 @@ pkgbase = sonic-audio-applet-pulse
 	depends = sonic-workspace
 	provides = plasma-pa
 	conflicts = plasma-pa
-	source = sonic-audio-applet-pulse-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-audio-applet-pulse/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = d1d47320cc2a66d042b5a85c8c4932e41906d4fc7f45e292d32d3cd84a222595
+	source = sonic-audio-applet-pulse-6.7.5.tar.gz::https://github.com/Sonic-DE/sonic-audio-applet-pulse/archive/refs/tags/6.7.5.tar.gz
+	sha256sums = 1d4ff55648c16193e2529d48705ed4e1d2a219cd8e5329a6e578dd659ad74132
 
 pkgname = sonic-audio-applet-pulse
