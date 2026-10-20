@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-breeze
-pkgver=6.8.0
+pkgver=6.7.5
 pkgrel=1
 pkgdesc='Artwork, styles and assets for the Breeze visual style for SonicDE'
 arch=('x86_64')
@@ -34,7 +34,7 @@ makedepends=('sonic-frameworks-cmake-modules')
 conflicts=('breeze-cursors')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('4e2cfbe1770bb80fcf4e7ad13bec17cf6f63cb518410180b408aee07c8fa35e5')
+sha256sums=('bb1adbc3b783927384eeb1190d0a7d87d4b42d626a7ed40ca02637e29dba080b')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
