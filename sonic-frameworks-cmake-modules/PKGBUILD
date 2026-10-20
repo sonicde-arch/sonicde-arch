@@ -4,8 +4,8 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-cmake-modules
-pkgver=6.30.0
-pkgrel=3
+pkgver=6.31.0
+pkgrel=1
 pkgdesc='Extra modules and scripts for CMake'
 arch=('any')
 url='https://github.com/Sonic-DE/sonic-frameworks-cmake-modules'
@@ -29,7 +29,7 @@ source=(
 	"$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
 	'default-arch-libexecdir.patch'
 )
-sha256sums=('e39f62a1fc0e58ddc36612ddcc850e4ef7f6b59db68b38d4573bf150ed1633cb'
+sha256sums=('12a4cc455aff3e18983425aaa24a0b6473376d2d8e21658c1f05865884cde4cd'
             '7e4f07c0b485419d906e04759a71f24674e4177c3d8d34270996d6678e88d03b')
 
 prepare() {
