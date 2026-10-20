@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-spell-check
-pkgver=6.30.0
+pkgver=6.31.0
 pkgrel=1
 pkgdesc='Spelling framework for Qt'
 arch=('x86_64')
@@ -39,7 +39,7 @@ provides=('sonnet')
 conflicts=('sonnet')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('0cfd382e875abbf2935a5f64a5c146381492540950897d56fcf54721535cfa10')
+sha256sums=('28b30cf2e5847c5416d5a9d1f971df42ed28e39a6fdec362158be4379e24d95a')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
