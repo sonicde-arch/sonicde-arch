@@ -1,7 +1,7 @@
 pkgbase = sonic-frameworks-idle-tracker
 	pkgdesc = User activity monitoring framework for SonicDE
-	pkgver = 6.30.0
-	pkgrel = 3
+	pkgver = 6.31.0
+	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-idle-tracker
 	arch = x86_64
 	groups = sonicde-frameworks
@@ -19,7 +19,7 @@ pkgbase = sonic-frameworks-idle-tracker
 	depends = qt6-base
 	provides = kidletime
 	conflicts = kidletime
-	source = sonic-frameworks-idle-tracker-6.30.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-idle-tracker/archive/refs/tags/6.30.0.tar.gz
-	sha256sums = 846d6bf634a7e2bac7d225505775fe0f8f4b07976a22d335e35a4ccdcecac502
+	source = sonic-frameworks-idle-tracker-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-idle-tracker/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = 0a1090330eac99f9bfb8693faaca2ab253afcd8c117ecd4190e647be8920afae
 
 pkgname = sonic-frameworks-idle-tracker

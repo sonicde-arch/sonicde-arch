@@ -4,8 +4,8 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-idle-tracker
-pkgver=6.30.0
-pkgrel=3
+pkgver=6.31.0
+pkgrel=1
 pkgdesc='User activity monitoring framework for SonicDE'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-frameworks-idle-tracker'
@@ -31,7 +31,7 @@ provides=('kidletime')
 conflicts=('kidletime')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('846d6bf634a7e2bac7d225505775fe0f8f4b07976a22d335e35a4ccdcecac502')
+sha256sums=('0a1090330eac99f9bfb8693faaca2ab253afcd8c117ecd4190e647be8920afae')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
