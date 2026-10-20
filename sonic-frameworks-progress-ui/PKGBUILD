@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-progress-ui
-pkgver=6.30.0
+pkgver=6.31.0
 pkgrel=1
 pkgdesc='Widgets for tracking KJob instances'
 arch=('x86_64')
@@ -35,7 +35,7 @@ provides=('kjobwidgets')
 conflicts=('kjobwidgets')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('e973404089dc31c410f18dac6a5d125bbf68e939ef4c8c9027ae7f0c0b749988')
+sha256sums=('89722314bd4168809b9f53b7ad57127254c032950d712c4cac6c4b6e368dd8d0')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \

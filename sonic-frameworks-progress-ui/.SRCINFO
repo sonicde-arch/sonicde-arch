@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-progress-ui
 	pkgdesc = Widgets for tracking KJob instances
-	pkgver = 6.30.0
+	pkgver = 6.31.0
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-progress-ui
 	arch = x86_64
@@ -23,7 +23,7 @@ pkgbase = sonic-frameworks-progress-ui
 	optdepends = sonic-pyside6: Python bindings
 	provides = kjobwidgets
 	conflicts = kjobwidgets
-	source = sonic-frameworks-progress-ui-6.30.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-progress-ui/archive/refs/tags/6.30.0.tar.gz
-	sha256sums = e973404089dc31c410f18dac6a5d125bbf68e939ef4c8c9027ae7f0c0b749988
+	source = sonic-frameworks-progress-ui-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-progress-ui/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = 89722314bd4168809b9f53b7ad57127254c032950d712c4cac6c4b6e368dd8d0
 
 pkgname = sonic-frameworks-progress-ui
