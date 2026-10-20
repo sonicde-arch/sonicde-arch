@@ -1,7 +1,7 @@
 # Maintainer: callmetango
 
 pkgname=sonic-breeze-sddm
-pkgver=6.8.0
+pkgver=6.7.5
 pkgrel=1
 pkgdesc="Sonic Breeze SDDM Theme"
 arch=(x86_64)
@@ -12,7 +12,7 @@ makedepends=(sonic-frameworks-cmake-modules)
 options=('!debug')
 groups=(sonicde)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('d2f1f84ed68a570f70c72a57db026136396808db6163a782734bccf210625d39')
+sha256sums=('6f773d41ef5e9cd92137ea46360aba3d9ad4fab0e94ceec9f7df4d339420b0c1')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
