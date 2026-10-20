@@ -9,7 +9,7 @@ pkgname=(
 	'sonic-oxygen-icons'
 	'sonic-oxygen-icons-svg'
 )
-pkgver=6.30.0
+pkgver=6.31.0
 pkgrel=1
 pkgdesc='SonicDE Oxygen Icon Theme'
 arch=('any')
@@ -24,7 +24,7 @@ conflicts=('oxygen-icons')
 options=('!debug')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('5e88a696c632001c21850cadd56fcf5b681cd77d1f25a27d9ae96632f1e4c634')
+sha256sums=('a67821bacab8058f74d0404bea374ab25cfa401ad2e451881d2b4752603723ec')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver"
