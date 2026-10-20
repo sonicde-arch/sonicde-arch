@@ -3,7 +3,7 @@
 # Contributor: Felix Yan <felixonmars@archlinux.org>
 
 pkgname=sonic-activity-manager-daemon
-pkgver=6.7.5
+pkgver=6.8.0
 pkgrel=1
 pkgdesc='System service to manage user activities and track the usage patterns'
 arch=('x86_64')
@@ -30,7 +30,7 @@ provides=('kactivitymanagerd')
 conflicts=('kactivitymanagerd')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('8b6270231b1928c9153a2209dadb0ff246d218756f73f624935545aecf70d1c0')
+sha256sums=('eeeb135f395eb83f3189e23e83f046fc73225563e9d76c54ac4e2a22948c7b9b')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
