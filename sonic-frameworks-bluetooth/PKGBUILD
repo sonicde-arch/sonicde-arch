@@ -2,7 +2,7 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=sonic-frameworks-bluetooth
-pkgver=6.30.0
+pkgver=6.31.0
 pkgrel=1
 pkgdesc='Qt wrapper for Bluez 5 DBus API'
 arch=('x86_64')
@@ -28,7 +28,7 @@ provides=('bluez-qt')
 conflicts=('bluez-qt')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('40416c2addcf30a5020e15134655f872315b46efac30c61f0596653dd97970ea')
+sha256sums=('1ec6e3e9f1a47c9e4fa16cf117c368ed166dc184e67516be8fb0484904cae21e')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
