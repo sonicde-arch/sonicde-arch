@@ -5,8 +5,8 @@
 # Contributor: Pierre Schmitz <pierre@archlinux.de>
 
 pkgname=sonic-ecco
-pkgver=26.08.0
-pkgrel=3
+pkgver=v26.08.2
+pkgrel=1
 pkgdesc='SonicDE File Manager'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-ecco'
@@ -70,7 +70,7 @@ groups=(
 	'sonicde-system'
 )
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('38f18867d455f7461c87e6eb5715c078ae3ead96f243260f742477216be9b771')
+sha256sums=('1e4843955bd6d629d9d0facb679642995332ba46f656cd4b820b82f809aed792')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
