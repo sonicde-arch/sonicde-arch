@@ -6,8 +6,8 @@
 : "${USE_SYSTEMD:=1}"
 
 pkgname=sonic-network-manager
-pkgver=6.7.5
-pkgrel=3
+pkgver=6.8.0
+pkgrel=1
 pkgdesc='SonicDE applet written in QML for managing network connections'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-network-manager'
@@ -64,7 +64,7 @@ provides=('plasma-nm')
 conflicts=('plasma-nm')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('bd688443fd21785946d28bf352dfed271617adba9abb80595dac76a234ae4c88')
+sha256sums=('b922bd0164eb66c35fe1dff9e525fa75bb8b90debc86e072465a0f2252e12c58')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
