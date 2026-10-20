@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-daemon
-pkgver=6.31.0
+pkgver=v6.31.0
 pkgrel=1
 pkgdesc='Extensible daemon for providing system level services'
 arch=('x86_64')
@@ -31,7 +31,7 @@ provides=('kded')
 conflicts=('kded')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('0d52426a6077b76f267bb74f46fa04a2501c3259fdd44460b1d37143873f99e1')
+sha256sums=('c7a54114fa8e6613c6780f27e8647426f7d3db7cfa97d7b3826890c4baf8cfb7')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
