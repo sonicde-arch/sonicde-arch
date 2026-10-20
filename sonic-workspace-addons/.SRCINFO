@@ -1,7 +1,7 @@
 pkgbase = sonic-workspace-addons
 	pkgdesc = All kind of addons to improve your SonicDE experience
-	pkgver = 6.7.5
-	pkgrel = 3
+	pkgver = 6.8.0
+	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-workspace-addons
 	arch = x86_64
 	groups = sonicde
@@ -51,7 +51,7 @@ pkgbase = sonic-workspace-addons
 	optdepends = sonic-frameworks-networkmanager: POTD wallpaper
 	provides = kdeplasma-addons
 	conflicts = kdeplasma-addons
-	source = sonic-workspace-addons-6.7.5.tar.gz::https://github.com/Sonic-DE/sonic-workspace-addons/archive/refs/tags/6.7.5.tar.gz
-	sha256sums = ef441e73bb425abf5bfeca0f8aa600a3913cf5c802bce49f51db2afa37d605a2
+	source = sonic-workspace-addons-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-workspace-addons/archive/refs/tags/6.8.0.tar.gz
+	sha256sums = de0e788c4d6263b750539e506b20c651e89127e12e5045e7a508279c3e20da66
 
 pkgname = sonic-workspace-addons
