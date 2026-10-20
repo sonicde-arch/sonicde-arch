@@ -2,7 +2,7 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=sonic-thunderbolt
-pkgver=6.7.5
+pkgver=6.8.0
 pkgrel=1
 pkgdesc='SonicDE integration for controlling Thunderbolt devices'
 arch=('x86_64')
@@ -27,7 +27,7 @@ provides=('plasma-thunderbolt')
 conflicts=('plasma-thunderbolt')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('a721de6caef2cc351fe4e3fa3c6260b1235e4a49c3c4650fcf91777c44bd8997')
+sha256sums=('d2788cd9476908a1370ed6c15f05b5f30c2558c474260dc379ef1fadf628e91f')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
