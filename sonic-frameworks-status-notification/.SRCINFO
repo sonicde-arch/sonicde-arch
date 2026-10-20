@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-status-notification
 	pkgdesc = Implementation of Status Notifier Items
-	pkgver = 6.30.0
+	pkgver = 6.31.0
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-status-notification
 	arch = x86_64
@@ -20,7 +20,7 @@ pkgbase = sonic-frameworks-status-notification
 	optdepends = sonic-pyside6: Python bindings
 	provides = kstatusnotifieritem
 	conflicts = kstatusnotifieritem
-	source = sonic-frameworks-status-notification-6.30.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-status-notification/archive/refs/tags/6.30.0.tar.gz
-	sha256sums = 7c92e674fc59bbec8f830d66d11c6c2d779aa1d20ba6305f2d6c4d7ac5151c72
+	source = sonic-frameworks-status-notification-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-status-notification/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = f4fd118254e2dadb5346f657de1cf891ec920916abc6bc4ed9e0147fe6c582d8
 
 pkgname = sonic-frameworks-status-notification
