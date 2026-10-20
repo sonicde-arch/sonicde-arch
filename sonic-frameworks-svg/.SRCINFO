@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-svg
 	pkgdesc = Components for handling SVGs
-	pkgver = 6.30.0
+	pkgver = 6.31.0
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-svg
 	arch = x86_64
@@ -25,7 +25,7 @@ pkgbase = sonic-frameworks-svg
 	optdepends = sonic-frameworks-quick-ui: QML bindings
 	provides = ksvg
 	conflicts = ksvg
-	source = sonic-frameworks-svg-6.30.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-svg/archive/refs/tags/6.30.0.tar.gz
-	sha256sums = ca25ca5bdc06d6a293d7437886b07d893fc041633c67922cba3ab1d8ef59bf5c
+	source = sonic-frameworks-svg-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-svg/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = b6c2d4c7059c83c236673fe9b7eb91ff487e34a1870d19159e428bb0bf4beb71
 
 pkgname = sonic-frameworks-svg
