@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-internationalization
 	pkgdesc = Advanced internationalization framework
-	pkgver = 6.30.0
+	pkgver = 6.31.0
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-internationalization
 	arch = x86_64
@@ -20,7 +20,7 @@ pkgbase = sonic-frameworks-internationalization
 	optdepends = qt6-declarative: ktranscript plugin and QML bindings
 	provides = ki18n
 	conflicts = ki18n
-	source = sonic-frameworks-internationalization-6.30.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-internationalization/archive/refs/tags/6.30.0.tar.gz
-	sha256sums = d2700db5b8749b9f5f411ce2d4025d4bbec72eb593e735eb20d9b40d48b4f467
+	source = sonic-frameworks-internationalization-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-internationalization/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = c1531d9695946f0d86e4095b9a21fa1af71ed3d6816a3fef761bfee07c085d33
 
 pkgname = sonic-frameworks-internationalization
