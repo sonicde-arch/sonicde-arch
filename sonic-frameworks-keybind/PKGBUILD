@@ -4,8 +4,8 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-keybind
-pkgver=6.30.0
-pkgrel=3
+pkgver=6.31.0
+pkgrel=1
 pkgdesc='Add support for global workspace shortcuts'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-frameworks-keybind'
@@ -27,7 +27,7 @@ provides=('kglobalaccel')
 conflicts=('kglobalaccel')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('c31507e0bbea544da33ceb7525cb8cdf9c45e95cf893060bb5209534d16b9895')
+sha256sums=('1a318fac8f6b3926e88b491d20944a53426d1f127dd8e6005fd81375e88f7f20')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
