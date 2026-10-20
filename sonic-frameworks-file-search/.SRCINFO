@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-file-search
 	pkgdesc = A framework for searching and managing metadata
-	pkgver = 6.30.0
+	pkgver = 6.31.0
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-file-search
 	arch = x86_64
@@ -29,7 +29,7 @@ pkgbase = sonic-frameworks-file-search
 	conflicts = baloo
 	conflicts = baloo5
 	replaces = baloo5
-	source = sonic-frameworks-file-search-6.30.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-file-search/archive/refs/tags/6.30.0.tar.gz
-	sha256sums = c9df9dabaa13d34864fceab0a465e29b8cc9d261fdc659a5557c20dca2f80ecb
+	source = sonic-frameworks-file-search-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-file-search/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = 79ba7b19a32f32622be4c139aab0f6114964cd830d26be658816ed2ad8662cf9
 
 pkgname = sonic-frameworks-file-search
