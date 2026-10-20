@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-file-search
-pkgver=6.30.0
+pkgver=6.31.0
 pkgrel=1
 pkgdesc='A framework for searching and managing metadata'
 arch=('x86_64')
@@ -43,7 +43,7 @@ conflicts=(
 replaces=('baloo5')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('c9df9dabaa13d34864fceab0a465e29b8cc9d261fdc659a5557c20dca2f80ecb')
+sha256sums=('79ba7b19a32f32622be4c139aab0f6114964cd830d26be658816ed2ad8662cf9')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
