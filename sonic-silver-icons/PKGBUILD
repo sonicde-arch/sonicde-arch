@@ -4,8 +4,8 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-silver-icons
-pkgver=6.30.0.1
-pkgrel=3
+pkgver=6.31.0
+pkgrel=1
 pkgdesc='Silver icon theme'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-silver-icons'
@@ -27,7 +27,7 @@ replaces=('sonic-frameworks-silver-icons')
 options=('!debug')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('33f8ed0eab0ac8b4e0ebffc968bc4368d053ce749abb4d8e0d49b9e182250bbd')
+sha256sums=('c6a04f28d0e08a7bf2ffd0d8421c0b63e36c491cb84cf767e12c7cdd301bba15')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
