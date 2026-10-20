@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-bluetooth
 	pkgdesc = Qt wrapper for Bluez 5 DBus API
-	pkgver = 6.30.0
+	pkgver = 6.31.0
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-bluetooth
 	arch = x86_64
@@ -18,7 +18,7 @@ pkgbase = sonic-frameworks-bluetooth
 	optdepends = qt6-declarative: QML bindings
 	provides = bluez-qt
 	conflicts = bluez-qt
-	source = sonic-frameworks-bluetooth-6.30.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-bluetooth/archive/refs/tags/6.30.0.tar.gz
-	sha256sums = 40416c2addcf30a5020e15134655f872315b46efac30c61f0596653dd97970ea
+	source = sonic-frameworks-bluetooth-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-bluetooth/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = 1ec6e3e9f1a47c9e4fa16cf117c368ed166dc184e67516be8fb0484904cae21e
 
 pkgname = sonic-frameworks-bluetooth
