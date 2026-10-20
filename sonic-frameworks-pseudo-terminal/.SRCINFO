@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-pseudo-terminal
 	pkgdesc = Pty abstraction
-	pkgver = 6.30.0
+	pkgver = 6.31.0
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-pseudo-terminal
 	arch = x86_64
@@ -18,7 +18,7 @@ pkgbase = sonic-frameworks-pseudo-terminal
 	depends = sonic-frameworks-internationalization
 	provides = kpty
 	conflicts = kpty
-	source = sonic-frameworks-pseudo-terminal-6.30.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-pseudo-terminal/archive/refs/tags/6.30.0.tar.gz
-	sha256sums = abdfa924a412bd73e0d26c80bef0eebae440985185f43b4231e242b91e0a700c
+	source = sonic-frameworks-pseudo-terminal-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-pseudo-terminal/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = 2a697267ec61c0edd876e7ae31195bb176a7f8487b86bed23f3b404b7be302d4
 
 pkgname = sonic-frameworks-pseudo-terminal
