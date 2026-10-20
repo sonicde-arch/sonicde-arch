@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-via
-pkgver=6.30.0
+pkgver=6.31.0
 pkgrel=1
 pkgdesc='Desktop keyboard configurator for QMK keyboards'
 arch=('x86_64')
@@ -23,7 +23,7 @@ depends=(
 makedepends=('sonic-frameworks-cmake-modules')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('1f1cee17890547aad5ec997e329092f0ae0cb4a80e849e20cdc256f3414bb364')
+sha256sums=('457a0e4b37c6b5a49ca813d011200e276087edde89dca1e9528729a8e7639c3f')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
