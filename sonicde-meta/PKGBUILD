@@ -5,8 +5,8 @@
 : "${USE_SYSTEMD:=1}"
 
 pkgname=sonicde-meta
-pkgver=6.7
-pkgrel=3
+pkgver=6.8
+pkgrel=1
 pkgdesc='Meta package to install SonicDE, an X11-focused fork of KDE'
 arch=('any')
 license=('None')
