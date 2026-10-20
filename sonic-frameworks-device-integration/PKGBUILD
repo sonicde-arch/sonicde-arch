@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-device-integration
-pkgver=6.30.0
+pkgver=6.31.0
 pkgrel=1
 pkgdesc='Hardware integration and detection'
 arch=('x86_64')
@@ -36,7 +36,7 @@ provides=('solid')
 conflicts=('solid')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('ce4be837f054a221471db32ad51641c7d9a71ec104ea9868546830dc9ec14b7e')
+sha256sums=('23c167241366e50d80ad050f4e80bc12814938cbdbbe16c1656563799b92209a')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
