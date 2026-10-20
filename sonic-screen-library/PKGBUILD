@@ -4,8 +4,8 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-screen-library
-pkgver=6.7.5
-pkgrel=3
+pkgver=6.8.0
+pkgrel=1
 pkgdesc='SonicDE screen management library'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-screen-library'
@@ -25,7 +25,7 @@ provides=('libkscreen')
 conflicts=('libkscreen')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('bb2dd88959eb63ffa00f88b37016358e12d1e1dbfaff4980fce79929807d07a3')
+sha256sums=('ffead6078337086aed96dd5b39558983a0e83e5f9154f37d362146ca5bc3777e')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
