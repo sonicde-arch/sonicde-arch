@@ -11,7 +11,10 @@ arch=('any')
 url='https://github.com/Sonic-DE/sonic-oxygen-sounds'
 license=('LGPL-2.0-or-later')
 depends=()
-makedepends=('sonic-frameworks-cmake-modules')
+makedepends=(
+	'qt6-base'
+	'sonic-frameworks-cmake-modules'
+)
 provides=('oxygen-sounds')
 conflicts=('oxygen-sounds')
 options=('!debug')
