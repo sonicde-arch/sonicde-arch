@@ -18,6 +18,7 @@ depends=(
 	'qtkeychain-qt6'
 	'sonic-frameworks-core-addons'
 	'sonic-frameworks-internationalization'
+	'sonic-frameworks-settings'
 	'sonic-frameworks-widgets-addons'
 )
 makedepends=(
