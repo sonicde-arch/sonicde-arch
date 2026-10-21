@@ -22,6 +22,8 @@ A85B B166 B49A 4C58 C391  2507 3B87 898C 73F1 1DF5
 
 The script will restart your graphical session so please save all your work beforehand. It will also silently replace the conflicting KDE components with the SonicDE ones. During its run, you have the option to switch to the [Sonic Login Manager](https://github.com/Sonic-DE/sonic-login-manager) from your current one. This is highly recommended when migrating from a Wayland setup using the Plasma Login Manager. In case you don't get logged out automatically, please do so manually and log in again to start using SonicDE.
 
+The script will also allow you to select one of the repositories mentioned further below. To switch to another one, completely comment your current `[sonicde*]` entry in your `/etc/pacman.conf` and re-run the script.
+
 ## Installing SonicDE Manually
 
 ### Adding the Public Package Signing Key to pacman
@@ -36,22 +38,44 @@ sudo pacman-key --lsign-key 3B87898C73F11DF5
 ```
 You can read more package signing on the [pacman/Package signing - ArchWiki](https://wiki.archlinux.org/title/Pacman/Package_signing#Adding_unofficial_keys) page.
 
-### Adding the Repository to Pacman
+### Adding a Repository to Pacman
 
 Once you added the public key, also add an entry for the SonicDE repository to the end of the file [`/etc/pacman.conf`](https://man.archlinux.org/man/pacman.conf.5) using [`sudo`](https://wiki.archlinux.org/title/Sudo) and your favorite editor:
+
+#### Stable Repository
+
+This repository contains the latest stable and tested SonicDE version.
 
 ```ini
 [sonicde]
 Server = https://sonicde-arch.github.io/$arch
 ```
 
-Run `pacman` to update all package indexes and installed packages:
+#### Stable-Testing Repository
+
+This repository contains the upcoming stable SonicDE version for testing purposes.
+
+```ini
+[sonicde-stable-testing]
+Server = https://github.com/sonicde-arch/stable-testing/releases/download/$arch
+```
+
+#### Beta Repository
+
+This repository occasionally contains a beta version of SonicDE version for feature development purposes. It's activation and deactivation will be announced in the SonicDE chats.
+
+```ini
+[sonicde-beta]
+Server = https://github.com/sonicde-arch/beta/releases/download/$arch
+```
+
+### Installing SonicDE
+
+After adding one of the above repositories, run `pacman` to update all package indexes and installed packages:
 
 ```shell
 sudo pacman -Syyu
 ```
-
-### Installing SonicDE
 
 If you're using KDE Wayland—which is the default in CachyOS, for example—you'll need to disable the Plasma Login Manager before continuing. Otherwise you may not be able to login to your graphical session anymore. To do so, use the following command:
 
