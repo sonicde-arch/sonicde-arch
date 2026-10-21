@@ -10,7 +10,10 @@ pkgdesc='Additional wallpapers for the Sonic Workspace'
 arch=('any')
 url='https://github.com/Sonic-DE/sonic-workspace-wallpapers'
 license=('LGPL')
-makedepends=('sonic-frameworks-cmake-modules')
+makedepends=(
+	'qt6-base'
+	'sonic-frameworks-cmake-modules'
+)
 options=('!debug')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
