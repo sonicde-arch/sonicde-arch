@@ -5,7 +5,7 @@
 
 pkgname=sonic-login-manager
 pkgver=6.8.0
-pkgrel=1
+pkgrel=2
 arch=('x86_64')
 pkgdesc='Sonic Login Manager'
 url='https://github.com/Sonic-DE/sonic-login-manager'
@@ -25,6 +25,7 @@ depends=(
 	'sonic-frameworks-internationalization'
 	'sonic-frameworks-io'
 	'sonic-frameworks-package'
+	'sonic-frameworks-quick-silver-style'
 	'sonic-frameworks-quick-ui'
 	'sonic-frameworks-settings'
 	'sonic-frameworks-settings-utils'
