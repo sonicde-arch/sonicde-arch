@@ -8,7 +8,7 @@
 
 pkgname=sonic-workspace
 pkgver=6.8.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc='SonicDE workspace components'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-workspace'
@@ -42,7 +42,6 @@ depends=(
 	'qt6-positioning'
 	'qt6-svg'
 	'qt6-tools' # for qdbus
-	'qt6-virtualkeyboard'
 	'sh'
 	'sonic-activities'
 	'sonic-activities-stats'
@@ -94,6 +93,7 @@ depends=(
 	'sonic-frameworks-windowsystem'
 	'sonic-frameworks-xml-gui'
 	'sonic-interface-libraries'
+	'sonic-keyboard'
 	'sonic-night-light'
 	'sonic-pipewire'
 	'sonic-screenlocker'
