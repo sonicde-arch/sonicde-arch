@@ -2,7 +2,7 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=sonic-keyboard
-pkgver=6.8.0
+pkgver=6.8.1
 pkgrel=1
 pkgdesc='Virtual keyboard for Qt-based desktops with SonicDE X11 integration'
 arch=('x86_64')
@@ -33,7 +33,7 @@ makedepends=('sonic-frameworks-cmake-modules')
 conflicts=('plasma-keyboard')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('3ec1d6f71eb1ab5aebaea072af07a2155b24c7ac01716dc96b466558f5bc1002')
+sha256sums=('189377c5f952e5133c1c92f3b30e5eb396513ee4da88a9d414c16148e0fba4fa')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
