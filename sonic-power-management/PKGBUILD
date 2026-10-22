@@ -3,9 +3,11 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
+: "${USE_SYSTEMD:=1}"
+
 pkgname=sonic-power-management
 pkgver=6.8.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Manages the power consumption settings of a SonicDE Shell'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-power-management'
@@ -14,6 +16,7 @@ depends=(
 	'ddcutil'
 	'glibc'
 	'libstdc++'
+	'libudev.so'
 	'qcoro'
 	'qt6-base'
 	'qt6-declarative'
@@ -37,7 +40,6 @@ depends=(
 	'sonic-interface-libraries'
 	'sonic-screen-library'
 	'sonic-workspace'
-	'systemd-libs'
 )
 makedepends=(
 	'sonic-frameworks-cmake-modules'
@@ -47,6 +49,9 @@ optdepends=(
 	'power-profiles-daemon: power profiles support'
 	'tlp: alternative power profiles support'
 	'sonic-system-info: for the Energy Information KCM'
+)
+((USE_SYSTEMD)) || optdepends+=(
+	'elogind: login1 service for session tracking and power-management inhibition'
 )
 provides=('powerdevil')
 conflicts=('powerdevil')
