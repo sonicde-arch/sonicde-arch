@@ -1,7 +1,7 @@
 pkgbase = sonic-screenies
 	pkgdesc = SonicDE screenshot capture utility
 	pkgver = 6.8.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-screenies
 	arch = x86_64
 	groups = sonicde
@@ -11,6 +11,7 @@ pkgbase = sonic-screenies
 	depends = glibc
 	depends = libgcc
 	depends = libstdc++
+	depends = libvdpau-va-gl
 	depends = libxcb
 	depends = opencv
 	depends = qt6-base
