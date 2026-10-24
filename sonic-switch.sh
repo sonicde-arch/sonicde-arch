@@ -10,7 +10,7 @@ set -eu
 
 # Constants
 
-VER='0.8.0'
+VER='0.9.0'
 HOMEPAGE='https://sonicde.org'
 REPO_HOMEPAGE='https://sonicde-arch.github.io'
 
@@ -42,8 +42,9 @@ INTRO_MSG='SonicDE.org sonic-switch.sh, version: %s.
 This script will install SonicDE on your system. It will restart your graphical session so please save all your work. It will also replace any conflicting KDE components with the SonicDE equivalents.
 '
 INSTALL_MSG='The installation of the SonicDE packages will start in %d seconds. It''s running in the background to continue in case your GUI session is getting terminated. You can find an installation log at %s.'
-LM_SWITCH_MSG='You''re currently using the `%s` login manager. SonicDE comes with the Sonic Login Manager which is highly recommended when migrating from Wayland-based setups. Do you want to switch to the Sonic Login Manager?'
-THANKS_MSG='Thank you for choosing SonicDE! Please see %s for any further information.'
+LM_SWITCH_MSG='SonicDE comes with the Sonic Login Manager which is highly recommended when migrating from Wayland-based setups. Do you want to switch to the Sonic Login Manager?'
+THANKS_MSG='Thank you for choosing SonicDE! Please see %s for any further information.
+'
 
 
 # Errors
@@ -118,7 +119,10 @@ pacinst="$sudo pacman --sync --needed"
 pkgs='sonicde-meta'
 slminst=
 
-yesno 'Are you ready to switch to SonicDE?' || exit 0
+if pacman -Qi $pkgs >$NUL 2>&1 ; then
+	msg 'Found an installation of SonicDE. Goood!'
+	die 0 "$THANKS_MSG" "$HOMEPAGE"
+fi
 
 
 # Main
@@ -147,23 +151,17 @@ if [ -z "$dbname" ] ; then
 	EO_REPO
 fi
 
-
-msg 'Updating your system:'
-$pacinst --refresh --sysupgrade
-
-if pacman -Qi $pkgs >$NUL 2>&1 ; then
-	msg 'Found an installation of SonicDE. Goood!'
-	die 0 "$THANKS_MSG" "$HOMEPAGE"
-fi
-
-
 msg 'Analyzing your login manager setup'
 lmname=$(findloginman)
-if [ -z "$lmname" ] ; then
-	msg 'Couldn''t identify your login manager. Keeping it.'
-elif [ "$lmname" != soniclogin ] && yesno "$LM_SWITCH_MSG" "$lmname" ; then
+if [ "$lmname" != soniclogin ] && yesno "$LM_SWITCH_MSG" ; then
 	slminst=1
 fi
+
+yesno 'Are you ready to switch to SonicDE?' || exit 0
+
+
+msg 'Refreshing package databases:'
+$pacinst --refresh
 
 msg 'Installing the dependencies of SonicDE:'
 $pacinst --print --print-format '%r %n' $pkgs > deps
@@ -178,13 +176,17 @@ yes | $pacinst --downloadonly $pkgs
 
 msg 'Assembling the installation script'
 printf 'set -eu; yes | pacman --sync --needed %s\n' "$pkgs" > install.sh
+svname=$lmname
+pacman -Q xdm-archlinux >$NUL 2>&1 && svname=xdm-archlinux
 if [ "$slminst" = 1 ] ; then
 	cat >> install.sh <<-SLMINS
-		systemctl stop '$lmname'
-		yes | pacman --sync --needed sonic-login-manager
+		test -n "$svname" && systemctl stop $svname
+		yes | pacman --sync --needed sonic-login-manager 2>/dev/null
 		systemctl enable --force soniclogin
 		systemctl start soniclogin
 	SLMINS
+elif [ -n "$svname" ] ; then
+	printf 'systemctl restart %s\n' "$svname" >> install.sh
 fi
 chmod a+x install.sh
 
@@ -192,6 +194,6 @@ msg "$INSTALL_MSG" 3 "$LOG"
 msg "$THANKS_MSG" "$HOMEPAGE"
 
 : > "$LOG"
-$sudo systemd-run --on-active=3s --unit=sonic-switch \
+$sudo systemd-run --on-active=3s --unit=sonic-switch-$$ \
 	/bin/sh -c "'$(pwd)'/install.sh >> '$LOG' 2>&1"
 tail -f "$LOG"
