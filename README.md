@@ -20,7 +20,9 @@ You'll be asked to compare the fingerprint of the OpenPGP key used to sign the p
 A85B B166 B49A 4C58 C391  2507 3B87 898C 73F1 1DF5
 ```
 
-The script will restart your graphical session so please save all your work beforehand. It will also silently replace the conflicting KDE components with the SonicDE ones. During its run, you have the option to switch to the [Sonic Login Manager](https://github.com/Sonic-DE/sonic-login-manager) from your current one. This is highly recommended when migrating from a Wayland setup using the Plasma Login Manager. In case you don't get logged out automatically, please do so manually and log in again to start using SonicDE.
+The script needs to be run at a [text console](https://wiki.archlinux.org/title/Linux_console) since the installation steps may kill your graphical session. You can switch to the text console via, e.g., `Ctrl+Alt+F3`.
+
+The script will also try to silently replace the conflicting KDE components with the SonicDE ones. If that fails, please answer any interactive `pacman` prompts. At the end, you have the option to switch to the [Sonic Login Manager](https://github.com/Sonic-DE/sonic-login-manager) from your current one. In case you don't get logged out automatically, please do so manually and log in again to start using SonicDE.
 
 The script will also allow you to select one of the repositories mentioned further below. To switch to another one, completely comment your current `[sonicde*]` entry in your `/etc/pacman.conf` and re-run the script.
 
@@ -34,8 +36,14 @@ First, please download the public OpenPGP signing key [`sonicde-archlinux.asc`](
 curl -O https://sonicde-arch.github.io/sonicde-archlinux.asc
 sudo pacman-key --add sonicde-archlinux.asc
 sudo pacman-key --finger 3B87898C73F11DF5
+```
+
+Check that the fingerprint matches before signing the key:
+
+```shell
 sudo pacman-key --lsign-key 3B87898C73F11DF5
 ```
+
 You can read more package signing on the [pacman/Package signing - ArchWiki](https://wiki.archlinux.org/title/Pacman/Package_signing#Adding_unofficial_keys) page.
 
 ### Adding a Repository to Pacman
@@ -71,22 +79,16 @@ Server = https://github.com/sonicde-arch/beta/releases/download/$arch
 
 ### Installing SonicDE
 
-After adding one of the above repositories, run `pacman` to update all package indexes and installed packages:
+Installing SonicDE is as easy as installing the `sonicde-meta` package. Please run the following commands at a [text console](https://wiki.archlinux.org/title/Linux_console)!
 
 ```shell
-sudo pacman -Syyu
+sudo pacman -Syu sonicde-meta
 ```
 
 If you're using KDE Wayland—which is the default in CachyOS, for example—you'll need to disable the Plasma Login Manager before continuing. Otherwise you may not be able to login to your graphical session anymore. To do so, use the following command:
 
 ```shell
 sudo systemctl disable plasmalogin
-```
-
-Installing SonicDE itself is as easy as installing the `sonicde-meta` package:
-
-```shell
-sudo pacman -S sonicde-meta
 ```
 
 The included packages will replace any of their installed KDE counterparts. When asked, just answer with `y`. In case you get kicked out of your graphical session while installing SonicDE on a KDE Wayland system, switch to a [text console](https://wiki.archlinux.org/title/Linux_console) via, e.g., `Ctrl+Alt+F3`, login in as your regular user and enter the following commands:
@@ -107,4 +109,3 @@ P.S. If you prefer SDDM or any other X11 login manager, you may keep using it. T
 Please report any enhancement requests or issues with this repository at [Issues · sonicde-arch/sonicde-arch](https://github.com/sonicde-arch/sonicde-arch/issues). If you have a specific issue, please see the [list of package repositories](https://github.com/orgs/sonicde-arch/repositories?q=topic%3Apackage) and report it there. In case you need help, want to report success or talk about other aspects, please also check the official SonicDE channels.
 
 <img src="./docs/icons/bluesky.svg">&nbsp;[Bluesky](https://bsky.app/profile/sonicdesktop.bsky.social)&nbsp; <img src="./docs/icons/discord.svg">&nbsp;[Discord](https://discord.gg/cNZMQ62u5S) &nbsp; <img src="./docs/icons/mastodon.svg">&nbsp;[Mastodon](https://mastodon.social/@sonicdesktop) &nbsp; <img src="./docs/icons/matrix.svg">&nbsp;[Matrix](https://matrix.to/#/#sonicdesktop:matrix.org) &nbsp; <img src="./docs/icons/oftc.svg">&nbsp;[OFTC IRC](https://webchat.oftc.net/?channels=sonicde%2Csonicde-devel%2Csonicde-dist&uio=MT11bmRlZmluZWQb1) &nbsp; <img src="./docs/icons/telegram.svg">&nbsp;[Telegram](https://t.me/sonic_de) &nbsp; <img src="./docs/icons/x.svg">&nbsp;[X (Twitter)](https://x.com/SonicDesktop)
-
