@@ -10,7 +10,7 @@ set -eu
 
 # Constants
 
-VER='0.9.0'
+VER='1.0.0'
 HOMEPAGE='https://sonicde.org'
 REPO_HOMEPAGE='https://sonicde-arch.github.io'
 
@@ -26,7 +26,6 @@ REPO_NAME_TPL='sonicde-%s'
 REPO_URL_TPL='https://github.com/sonicde-arch/%s/releases/download/$arch'
 
 KNOWN_LMS='emptty gdm greetd lemurs lightdm lxdm ly plasmalogin sddm slim soniclogin xdm'
-LOG=$HOME/sonic-switch.log
 NUL=/dev/null
 
 DISTRO_TYPE='Arch Linux based'
@@ -39,9 +38,8 @@ CHOOSE_BINPKG_REPO_MSG='Please select the SonicDE repository you want to use:'
 FPRINT_MSG='Please compare the key fingerprint to the one at %s. Does it look right?'
 INTRO_MSG='SonicDE.org sonic-switch.sh, version: %s.
 
-This script will install SonicDE on your system. It will restart your graphical session so please save all your work. It will also replace any conflicting KDE components with the SonicDE equivalents.
+This script will install SonicDE on your system. Please run it from a terminal only! The script will try to automatically replace any conflicting KDE components with the SonicDE equivalents. If that fails, please interactively answer any questions.
 '
-INSTALL_MSG='The installation of the SonicDE packages will start in %d seconds. It''s running in the background to continue in case your GUI session is getting terminated. You can find an installation log at %s.'
 LM_SWITCH_MSG='SonicDE comes with the Sonic Login Manager which is highly recommended when migrating from Wayland-based setups. Do you want to switch to the Sonic Login Manager?'
 THANKS_MSG='Thank you for choosing SonicDE! Please see %s for any further information.
 '
@@ -59,15 +57,14 @@ WRONG_FPRINT_ERR='Wrong fingerprint. Aborting.'
 
 chooserepo() {
 	printf '%s\n' "$1"
-	printf '%s\n' "$2" | cut -d '|' -f 1 | grep -n '.*' | sed 's/:/) /g'
+	printf '%s\n' "$2" | cut -d '|' -f 1 | nl -b a -w 1 -s ') '
+	printf '0) exit script\n'
 	_max=$(printf '%s\n' "$2" | wc -l)
-	printf '0:exit script\n'
 	while :; do
 		IFS= read -r _choice || die 1 'Input closed.'
-		test "$_choice" = 0 && die 1 'Exiting.'
 		case $_choice in
+			0) die 1 'Exiting.' ;;
 			''|*[!0-9]*) continue ;;
-			*) : ;;
 		esac
 		test $_choice -gt 0 -a $_choice -le $_max && break
 	done
@@ -76,7 +73,7 @@ chooserepo() {
 
 findloginman() {
 	_regex=$(printf '%s' "$KNOWN_LMS" | tr ' ' '|')
-	ps -A -o comm= | grep -E "^(${_regex})$" || :
+	ps -A -o comm= | grep -E "^(${_regex})$" | head -n 1 || :
 }
 
 msg() {
@@ -93,13 +90,7 @@ yesno() {
 
 die() {
 	rc=$1; fstring=$2; shift 2
-	printf "\n$fstring\n" "$@"
-	exit "$rc"
-}
-
-thank_you() {
-	printf "$THANKS_MSG\n" "$ORIG_URL"
-	exit 0
+	printf "\n$fstring\n" "$@"; exit "$rc"
 }
 
 
@@ -123,6 +114,8 @@ if pacman -Qi $pkgs >$NUL 2>&1 ; then
 	msg 'Found an installation of SonicDE. Goood!'
 	die 0 "$THANKS_MSG" "$HOMEPAGE"
 fi
+
+yesno 'Are you ready to switch to SonicDE?' || exit 0
 
 
 # Main
@@ -157,43 +150,21 @@ if [ "$lmname" != soniclogin ] && yesno "$LM_SWITCH_MSG" ; then
 	slminst=1
 fi
 
-yesno 'Are you ready to switch to SonicDE?' || exit 0
+msg 'Installing SonicDE'
+yes | $pacinst --refresh --sysupgrade --noconfirm "$pkgs" 2>$NUL ||
+	$pacinst --refresh --sysupgrade "$pkgs"
 
-
-msg 'Refreshing package databases:'
-$pacinst --refresh
-
-msg 'Installing the dependencies of SonicDE:'
-$pacinst --print --print-format '%r %n' $pkgs > deps
-while read -r repo pkg; do
-	test "$repo" = "$dbname" && continue
-	extdeps="${extdeps:-} ${pkg}"
-done < deps
-test -n "${extdeps:-}" && $pacinst --asdeps --noconfirm $extdeps
-
-msg 'Downloading the SonicDE packages:'
-yes | $pacinst --downloadonly $pkgs
-
-msg 'Assembling the installation script'
-printf 'set -eu; yes | pacman --sync --needed %s\n' "$pkgs" > install.sh
 svname=$lmname
 pacman -Q xdm-archlinux >$NUL 2>&1 && svname=xdm-archlinux
 if [ "$slminst" = 1 ] ; then
-	cat >> install.sh <<-SLMINS
-		test -n "$svname" && systemctl stop $svname
-		yes | pacman --sync --needed sonic-login-manager 2>/dev/null
-		systemctl enable --force soniclogin
-		systemctl start soniclogin
-	SLMINS
+	test -n "$svname" && $sudo systemctl stop $svname 2>$NUL || :
+	yes | $pacinst sonic-login-manager 2>$NUL
+	$sudo systemctl enable --force --now soniclogin
 elif [ -n "$svname" ] ; then
-	printf 'systemctl restart %s\n' "$svname" >> install.sh
+	$sudo systemctl restart $svname
 fi
-chmod a+x install.sh
 
-msg "$INSTALL_MSG" 3 "$LOG"
-msg "$THANKS_MSG" "$HOMEPAGE"
-
-: > "$LOG"
-$sudo systemd-run --on-active=3s --unit=sonic-switch-$$ \
-	/bin/sh -c "'$(pwd)'/install.sh >> '$LOG' 2>&1"
-tail -f "$LOG"
+msg 'Setting up services'
+$sudo systemctl enable --now NetworkManager.service
+systemctl --user enable --now \
+	pipewire.socket pipewire-pulse.socket wireplumber.service || :
