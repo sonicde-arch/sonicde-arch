@@ -4,7 +4,7 @@
 : "${USE_SYSTEMD:=1}"
 
 pkgname=sonic-system-stats
-pkgver=6.8.0
+pkgver=6.8.2
 pkgrel=1
 pkgdesc='A plugin based system monitoring daemon'
 arch=('x86_64')
@@ -34,7 +34,7 @@ provides=('ksystemstats')
 conflicts=('ksystemstats')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('e627e2242ad46659f4cb776c55f8ec59d6a1af3103dc8b210ac9eb1abe01833c')
+sha256sums=('b2d7f561d8dfa0b2e7ad274e10a69bafc9d9bce276107aba29cbb403502c3cec')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
