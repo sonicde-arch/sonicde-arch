@@ -6,8 +6,8 @@
 : "${USE_SYSTEMD:=1}"
 
 pkgname=sonic-power-management
-pkgver=6.8.0.1
-pkgrel=2
+pkgver=6.8.2
+pkgrel=1
 pkgdesc='Manages the power consumption settings of a SonicDE Shell'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-power-management'
@@ -57,7 +57,7 @@ provides=('powerdevil')
 conflicts=('powerdevil')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('c057ae52b09b9c72797b4315e490d8875f1d9df4c106bc4981d5b91065961163')
+sha256sums=('bb7dfe1fbc64406bce4972f12c93a9ab60bccbfa5a984a504312ad5f9b42a9a1')
 
 build() {
 	cmake -B build  -S $pkgname-$pkgver \
