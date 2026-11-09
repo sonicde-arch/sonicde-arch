@@ -1,6 +1,6 @@
 pkgbase = sonic-browser-integration
 	pkgdesc = Components necessary to integrate browsers into SonicDE
-	pkgver = 6.8.0
+	pkgver = 6.8.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-browser-integration
 	arch = x86_64
@@ -25,7 +25,7 @@ pkgbase = sonic-browser-integration
 	depends = sonic-workspace
 	provides = plasma-browser-integration
 	conflicts = plasma-browser-integration
-	source = sonic-browser-integration-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-browser-integration/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = bcea627846cac1f046bb1df6de6e3802ba28bccdae26ea8107dc5b5af769299f
+	source = sonic-browser-integration-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-browser-integration/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = 805e5753324b57ba36bcd332698245c21fe3f2711fbe0757a2b5b04ded19810a
 
 pkgname = sonic-browser-integration
