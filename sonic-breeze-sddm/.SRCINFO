@@ -1,6 +1,6 @@
 pkgbase = sonic-breeze-sddm
 	pkgdesc = Sonic Breeze SDDM Theme
-	pkgver = 6.8.0
+	pkgver = 6.8.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-breeze-sddm
 	arch = x86_64
@@ -9,7 +9,7 @@ pkgbase = sonic-breeze-sddm
 	makedepends = sonic-frameworks-cmake-modules
 	depends = sonic-workspace
 	options = !debug
-	source = sonic-breeze-sddm-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-breeze-sddm/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = 3d65892246d009bebb33059f12217bb36101cb91f79371496330ddb98e913cd6
+	source = sonic-breeze-sddm-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-breeze-sddm/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = 53577260bd64b43d070b1019024cbe19c061d1ed9fab69a66889ecc79c12af20
 
 pkgname = sonic-breeze-sddm
