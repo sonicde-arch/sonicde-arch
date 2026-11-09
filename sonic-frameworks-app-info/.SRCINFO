@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-app-info
 	pkgdesc = Advanced plugin and service introspection
-	pkgver = 6.31.0
+	pkgver = 6.31.0.1
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-app-info
 	arch = x86_64
@@ -19,7 +19,7 @@ pkgbase = sonic-frameworks-app-info
 	depends = sonic-frameworks-settings
 	provides = kservice
 	conflicts = kservice
-	source = sonic-frameworks-app-info-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-app-info/archive/refs/tags/6.31.0.tar.gz
-	sha256sums = e3ed13389fd05a544480ac73e5fc04198f353658278fa8645df680c81b364f06
+	source = sonic-frameworks-app-info-6.31.0.1.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-app-info/archive/refs/tags/6.31.0.1.tar.gz
+	sha256sums = 6a6292722f743392a83897ef076e617604104c3fc0f1fd84dea1adf52db7aca0
 
 pkgname = sonic-frameworks-app-info
