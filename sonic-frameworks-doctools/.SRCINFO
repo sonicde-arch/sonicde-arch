@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-doctools
 	pkgdesc = Documentation generation from docbook
-	pkgver = 6.31.0
+	pkgver = 6.31.0.1
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-doctools
 	arch = x86_64
@@ -21,7 +21,7 @@ pkgbase = sonic-frameworks-doctools
 	depends = sonic-frameworks-archive
 	provides = kdoctools
 	conflicts = kdoctools
-	source = sonic-frameworks-doctools-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-doctools/archive/refs/tags/6.31.0.tar.gz
-	sha256sums = 5aa6352150a4ca25729512d4038df19b8dbd0de1c4b9d32d0efb5e678fcfcde8
+	source = sonic-frameworks-doctools-6.31.0.1.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-doctools/archive/refs/tags/6.31.0.1.tar.gz
+	sha256sums = 2eee0a6bf0061ee0dc0859b5ca9ca8531aa5af4fb8629ab29fbc3263bc511fc5
 
 pkgname = sonic-frameworks-doctools
