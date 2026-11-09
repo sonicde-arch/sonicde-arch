@@ -1,6 +1,6 @@
 pkgbase = sonic-launcher-menu-edit
 	pkgdesc = SonicDE menu editor
-	pkgver = 6.8.0
+	pkgver = 6.8.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-launcher-menu-edit
 	arch = x86_64
@@ -29,7 +29,7 @@ pkgbase = sonic-launcher-menu-edit
 	depends = sonic-frameworks-xml-gui
 	provides = kmenuedit
 	conflicts = kmenuedit
-	source = sonic-launcher-menu-edit-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-launcher-menu-edit/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = c5117e540825ba845218e838ef97e2a5096885b83b031f6c62412bfe18f8965d
+	source = sonic-launcher-menu-edit-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-launcher-menu-edit/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = b8c1ed69f12dd94b3146978fc51da262959c93b004536c9e425618b9644eff21
 
 pkgname = sonic-launcher-menu-edit
