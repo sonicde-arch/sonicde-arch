@@ -1,6 +1,6 @@
 pkgbase = sonic-ecco
 	pkgdesc = SonicDE File Manager
-	pkgver = 26.08.2
+	pkgver = 26.08.3
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-ecco
 	arch = x86_64
@@ -55,7 +55,7 @@ pkgbase = sonic-ecco
 	optdepends = sonic-terminal: terminal panel
 	provides = dolphin
 	conflicts = dolphin
-	source = sonic-ecco-26.08.2.tar.gz::https://github.com/Sonic-DE/sonic-ecco/archive/refs/tags/26.08.2.tar.gz
-	sha256sums = 1829f62dfdd57b55c6b1ecb9a0278f0a61fb77748582f317009d39e0125c201d
+	source = sonic-ecco-26.08.3.tar.gz::https://github.com/Sonic-DE/sonic-ecco/archive/refs/tags/26.08.3.tar.gz
+	sha256sums = 55c5a36e0e9d545b639f46f1e0e4772a8ddc785699f1458cc9a8063fec8dd767
 
 pkgname = sonic-ecco
