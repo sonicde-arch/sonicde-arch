@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-settings-ui
-pkgver=6.31.0
+pkgver=6.31.0.1
 pkgrel=1
 pkgdesc='Widgets for configuration dialogs'
 arch=('x86_64')
@@ -33,7 +33,7 @@ provides=('kconfigwidgets')
 conflicts=('kconfigwidgets')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('a6a753a8333c6e32b890ccb6fd80f28b2a96885edfcacad7bf0596cc8ce15cb5')
+sha256sums=('5901e2219b42f66e48bf08a62771e4dcf1772060cf0886b8739f17d186928c55')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
