@@ -1,6 +1,6 @@
 pkgbase = sonic-system-stats
 	pkgdesc = A plugin based system monitoring daemon
-	pkgver = 6.8.0
+	pkgver = 6.8.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-system-stats
 	arch = x86_64
@@ -22,7 +22,7 @@ pkgbase = sonic-system-stats
 	depends = sonic-system-monitor-library
 	provides = ksystemstats
 	conflicts = ksystemstats
-	source = sonic-system-stats-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-system-stats/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = e627e2242ad46659f4cb776c55f8ec59d6a1af3103dc8b210ac9eb1abe01833c
+	source = sonic-system-stats-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-system-stats/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = b2d7f561d8dfa0b2e7ad274e10a69bafc9d9bce276107aba29cbb403502c3cec
 
 pkgname = sonic-system-stats
