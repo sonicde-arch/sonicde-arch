@@ -2,7 +2,7 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=sonic-system-monitor
-pkgver=6.8.0
+pkgver=6.8.2
 pkgrel=1
 pkgdesc='An interface for monitoring system sensors, process information and other system resources'
 arch=('x86_64')
@@ -42,7 +42,7 @@ conflicts=('plasma-systemmonitor')
 replaces=('ksysguard')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('c5871c654cedf848dd2f625d5b885805fc67c59ec21d7d8736a255ef1a18e921')
+sha256sums=('29c31582d46afe5580ababd7de7770588eefe876a5f7b9ec4ad717326b08afad')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver"
