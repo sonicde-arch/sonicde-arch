@@ -1,6 +1,6 @@
 pkgbase = sonic-polkit-agent
 	pkgdesc = Daemon providing a polkit authentication UI for SonicDE
-	pkgver = 6.8.0
+	pkgver = 6.8.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-polkit-agent
 	arch = x86_64
@@ -22,7 +22,7 @@ pkgbase = sonic-polkit-agent
 	depends = sonic-polkit
 	provides = polkit-kde-agent
 	conflicts = polkit-kde-agent
-	source = sonic-polkit-agent-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-polkit-agent/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = 2085cf4bbc40bc787191c9f53a635ce24530e384571f8a74374ac78d0c63f311
+	source = sonic-polkit-agent-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-polkit-agent/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = cf7321e1884f31c8c008081b85c26bda231227224a46810f793d50e223f48189
 
 pkgname = sonic-polkit-agent
