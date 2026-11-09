@@ -1,6 +1,6 @@
 pkgbase = sonic-disks
 	pkgdesc = Monitors S.M.A.R.T. capable devices for imminent failure
-	pkgver = 6.8.0
+	pkgver = 6.8.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-disks
 	arch = x86_64
@@ -27,7 +27,7 @@ pkgbase = sonic-disks
 	depends = sonic-system-info
 	provides = plasma-disks
 	conflicts = plasma-disks
-	source = sonic-disks-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-disks/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = fa757234b5af1c878566d48bde9880db02ac0afd2ae7d55f7058399165f7b4e5
+	source = sonic-disks-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-disks/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = fd750b19dece85d4da2e6eb6b462dcb2861cf378ea787412527e0a5e31b02290
 
 pkgname = sonic-disks
