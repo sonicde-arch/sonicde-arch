@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-frameworks-autocomplete
-pkgver=6.31.0
+pkgver=6.31.0.1
 pkgrel=1
 pkgdesc='Text completion helpers and widgets'
 arch=('x86_64')
@@ -30,7 +30,7 @@ provides=('kcompletion')
 conflicts=('kcompletion')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('74da7d7cba14724d231a3709f829f2a006c408e02722f8f17ab3a2d970a47a07')
+sha256sums=('50888a865ec5844fc49248ed3ca60e9ed51d43f04b790f8707fe726af6243c54')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
