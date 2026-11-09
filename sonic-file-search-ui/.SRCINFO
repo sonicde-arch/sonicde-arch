@@ -1,7 +1,7 @@
 pkgbase = sonic-file-search-ui
 	pkgdesc = A dedicated search application for SonicDE
-	pkgver = 6.8.0
-	pkgrel = 2
+	pkgver = 6.8.2
+	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-file-search-ui
 	arch = x86_64
 	groups = sonicde
@@ -20,7 +20,7 @@ pkgbase = sonic-file-search-ui
 	depends = sonic-interface-libraries
 	provides = milou
 	conflicts = milou
-	source = sonic-file-search-ui-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-file-search-ui/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = 7d9fd9d3fadddb62c56e1938dadf4522fc129a43d50963e7afb7a5f5df9ca9ab
+	source = sonic-file-search-ui-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-file-search-ui/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = 87ec80a46136edda336bec29b7132fa6e351a78a63eea8d8fc36a5c7af8fb0e4
 
 pkgname = sonic-file-search-ui
