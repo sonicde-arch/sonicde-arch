@@ -1,7 +1,7 @@
 pkgbase = sonic-bluetooth-runtime
 	pkgdesc = Integrate Bluetooth within SonicDE components
-	pkgver = 6.8.0
-	pkgrel = 2
+	pkgver = 6.8.2
+	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-bluetooth-runtime
 	arch = x86_64
 	groups = sonicde
@@ -32,7 +32,7 @@ pkgbase = sonic-bluetooth-runtime
 	optdepends = pulseaudio-bluetooth: to connect to A2DP profile
 	provides = bluedevil
 	conflicts = bluedevil
-	source = sonic-bluetooth-runtime-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-bluetooth-runtime/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = 766387d75bc9a4ccc889e0f3bbc9fb8e4700dc502088b33d49fb12ad7f513cb4
+	source = sonic-bluetooth-runtime-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-bluetooth-runtime/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = 8346609c7926ca1d3205d6dccd94f895705f2107c0e2f83f4361cbd9619b0931
 
 pkgname = sonic-bluetooth-runtime
