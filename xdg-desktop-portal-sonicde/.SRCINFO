@@ -1,6 +1,6 @@
 pkgbase = xdg-desktop-portal-sonicde
 	pkgdesc = X11 backend for xdg-desktop-portal using SonicDE and Qt
-	pkgver = 6.8.0
+	pkgver = 6.8.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/xdg-desktop-portal-sonicde
 	arch = x86_64
@@ -40,7 +40,7 @@ pkgbase = xdg-desktop-portal-sonicde
 	provides = xdg-desktop-portal-impl
 	provides = xdg-desktop-portal-kde
 	conflicts = xdg-desktop-portal-kde
-	source = xdg-desktop-portal-sonicde-6.8.0.tar.gz::https://github.com/Sonic-DE/xdg-desktop-portal-sonicde/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = 55b22d3cecdca7bc018d972324aef052b0c8583b3cd86928fca6bc9f4cb798b3
+	source = xdg-desktop-portal-sonicde-6.8.2.tar.gz::https://github.com/Sonic-DE/xdg-desktop-portal-sonicde/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = 73776bd721dce6af45abf0f0be52118b8c568469b1f45d264f7507470df804ce
 
 pkgname = xdg-desktop-portal-sonicde
