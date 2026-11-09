@@ -1,7 +1,7 @@
 pkgbase = sonic-mobile-interface
 	pkgdesc = SonicDE interface for mobile devices
-	pkgver = 6.8.0
-	pkgrel = 2
+	pkgver = 6.8.2
+	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-mobile-interface
 	arch = x86_64
 	groups = sonicde
@@ -55,7 +55,7 @@ pkgbase = sonic-mobile-interface
 	optdepends = sonic-screen: Screen management
 	provides = plasma-mobile
 	conflicts = plasma-mobile
-	source = sonic-mobile-interface-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-mobile-interface/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = 5c79777f6f90451043aab480f1cbca72cac3fcdb4d19da31ab84435c10497b32
+	source = sonic-mobile-interface-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-mobile-interface/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = 5303977776b8a5a6c53e592839fce86176064b7dd270bba804b5bb3bbb77b76f
 
 pkgname = sonic-mobile-interface
