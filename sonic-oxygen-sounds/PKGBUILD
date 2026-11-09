@@ -5,7 +5,7 @@
 
 pkgname=sonic-oxygen-sounds
 pkgdesc='The Oxygen Sound Theme'
-pkgver=6.8.0
+pkgver=6.8.2
 pkgrel=1
 arch=('any')
 url='https://github.com/Sonic-DE/sonic-oxygen-sounds'
@@ -20,7 +20,7 @@ conflicts=('oxygen-sounds')
 options=('!debug')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('b3efc535da0d1061c245051606da0c301581c4758df6ffd008e8ae44e0f9ede9')
+sha256sums=('d4ef36a0448b09ad5df91c815b05b7fb8f8f54ce2fc18b4952296929a9438e70')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver"
