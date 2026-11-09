@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-settings-ui
 	pkgdesc = Widgets for configuration dialogs
-	pkgver = 6.31.0
+	pkgver = 6.31.0.1
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-settings-ui
 	arch = x86_64
@@ -21,7 +21,7 @@ pkgbase = sonic-frameworks-settings-ui
 	depends = sonic-frameworks-widgets-addons
 	provides = kconfigwidgets
 	conflicts = kconfigwidgets
-	source = sonic-frameworks-settings-ui-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-settings-ui/archive/refs/tags/6.31.0.tar.gz
-	sha256sums = a6a753a8333c6e32b890ccb6fd80f28b2a96885edfcacad7bf0596cc8ce15cb5
+	source = sonic-frameworks-settings-ui-6.31.0.1.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-settings-ui/archive/refs/tags/6.31.0.1.tar.gz
+	sha256sums = 5901e2219b42f66e48bf08a62771e4dcf1772060cf0886b8739f17d186928c55
 
 pkgname = sonic-frameworks-settings-ui
