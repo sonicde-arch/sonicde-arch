@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-crash-handler
 	pkgdesc = Support for application crash analysis and bug report from apps
-	pkgver = 6.31.0
+	pkgver = 6.31.0.1
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-crash-handler
 	arch = x86_64
@@ -19,7 +19,7 @@ pkgbase = sonic-frameworks-crash-handler
 	optdepends = sonic-dr-robotnik: SonicDE crash handler application
 	provides = kcrash
 	conflicts = kcrash
-	source = sonic-frameworks-crash-handler-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-crash-handler/archive/refs/tags/6.31.0.tar.gz
-	sha256sums = 861cfef740bb6ba82bde263c4eefcc057652f37ed2bdac366b8f2c505396160c
+	source = sonic-frameworks-crash-handler-6.31.0.1.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-crash-handler/archive/refs/tags/6.31.0.1.tar.gz
+	sha256sums = 823e9d2d353737e7d17f9b64037cdd4661862b46849593a5a91849eb128bf814
 
 pkgname = sonic-frameworks-crash-handler
