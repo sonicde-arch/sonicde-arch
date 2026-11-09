@@ -1,6 +1,6 @@
 pkgbase = sonic-silver-gtk
 	pkgdesc = Silver widget theme for GTK 2 and 3
-	pkgver = 6.8.0
+	pkgver = 6.8.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-silver-gtk
 	arch = any
@@ -13,7 +13,7 @@ pkgbase = sonic-silver-gtk
 	provides = breeze-gtk
 	conflicts = breeze-gtk
 	options = !debug
-	source = sonic-silver-gtk-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-silver-gtk/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = 3f6a325544b03d2f8b787381e55320d62b96504d6a78bfa85e3180ca48137ce8
+	source = sonic-silver-gtk-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-silver-gtk/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = 77a45a2f40b4511694f0fb8a15bd202d4002a5c08677d0593244c0617566cedc
 
 pkgname = sonic-silver-gtk
