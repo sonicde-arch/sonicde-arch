@@ -2,7 +2,7 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=sonic-browser-integration
-pkgver=6.8.0
+pkgver=6.8.2
 pkgrel=1
 pkgdesc='Components necessary to integrate browsers into SonicDE'
 arch=('x86_64')
@@ -31,7 +31,7 @@ provides=('plasma-browser-integration')
 conflicts=('plasma-browser-integration')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('bcea627846cac1f046bb1df6de6e3802ba28bccdae26ea8107dc5b5af769299f')
+sha256sums=('805e5753324b57ba36bcd332698245c21fe3f2711fbe0757a2b5b04ded19810a')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
