@@ -1,7 +1,7 @@
 pkgbase = sonic-tv-interface
 	pkgdesc = SonicDE interface for TVs
-	pkgver = 6.8.0
-	pkgrel = 2
+	pkgver = 6.8.2
+	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-tv-interface
 	arch = x86_64
 	groups = sonicde
@@ -47,7 +47,7 @@ pkgbase = sonic-tv-interface
 	depends = sonic-workspace
 	provides = plasma-bigscreen
 	conflicts = plasma-bigscreen
-	source = sonic-tv-interface-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-tv-interface/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = 143091666dba8d26ec286b43b8cc7fb469a744e9bab6bc81f785b1d9feb6b69d
+	source = sonic-tv-interface-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-tv-interface/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = c2b9ffc4e7c057ce2a8e08721b44fe1faae4196563dcce60edccb069fc90c2a0
 
 pkgname = sonic-tv-interface
