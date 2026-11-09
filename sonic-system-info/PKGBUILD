@@ -4,8 +4,8 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-system-info
-pkgver=6.8.0
-pkgrel=2
+pkgver=6.8.2
+pkgrel=1
 pkgdesc='A utility that provides information about a computer system'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-system-info'
@@ -56,7 +56,7 @@ provides=('kinfocenter')
 conflicts=('kinfocenter')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('2cb71d6190a618bd08180a12698db57a9cfc65dedf30121288dfc03a669dae6a')
+sha256sums=('a8e7532668562e4d3f4b4d0526d64a7a832f2a3647fa4def0d6de7b648d2c0d2')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
