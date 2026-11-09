@@ -2,7 +2,7 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=xdg-desktop-portal-sonicde
-pkgver=6.8.0
+pkgver=6.8.2
 pkgrel=1
 pkgdesc='X11 backend for xdg-desktop-portal using SonicDE and Qt'
 arch=('x86_64')
@@ -48,7 +48,7 @@ provides=(
 conflicts=('xdg-desktop-portal-kde')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('55b22d3cecdca7bc018d972324aef052b0c8583b3cd86928fca6bc9f4cb798b3')
+sha256sums=('73776bd721dce6af45abf0f0be52118b8c568469b1f45d264f7507470df804ce')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
