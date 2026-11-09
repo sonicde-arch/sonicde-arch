@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-via
 	pkgdesc = Desktop keyboard configurator for QMK keyboards
-	pkgver = 6.31.0
+	pkgver = 6.31.0.1
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-via
 	arch = x86_64
@@ -13,7 +13,7 @@ pkgbase = sonic-frameworks-via
 	depends = hidapi
 	depends = libstdc++
 	depends = qt6-base
-	source = sonic-frameworks-via-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-via/archive/refs/tags/6.31.0.tar.gz
-	sha256sums = 981c6231fc97c2c5466fefee3a76558eea6ae787d18548cd06e88a577ac47771
+	source = sonic-frameworks-via-6.31.0.1.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-via/archive/refs/tags/6.31.0.1.tar.gz
+	sha256sums = 64c9532ed05df392c84481542a178324c00e4ba504307283e084246483240cfc
 
 pkgname = sonic-frameworks-via
