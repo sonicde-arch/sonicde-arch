@@ -1,6 +1,6 @@
 pkgbase = sonic-dr-robotnik
 	pkgdesc = The SonicDE crash handler
-	pkgver = 6.8.0.1
+	pkgver = 6.8.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-dr-robotnik
 	arch = x86_64
@@ -38,7 +38,7 @@ pkgbase = sonic-dr-robotnik
 	depends = systemd-libs
 	provides = drkonqi
 	conflicts = drkonqi
-	source = sonic-dr-robotnik-6.8.0.1.tar.gz::https://github.com/Sonic-DE/sonic-dr-robotnik/archive/refs/tags/6.8.0.1.tar.gz
-	sha256sums = e20edcfa970d81e706baf5d384db5363a62626b66ae7797c8527f41d0de7fe4d
+	source = sonic-dr-robotnik-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-dr-robotnik/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = 37618211879b038068912b43798ce90095c7f99da90ed87acd4f9d3c56af4cb4
 
 pkgname = sonic-dr-robotnik
