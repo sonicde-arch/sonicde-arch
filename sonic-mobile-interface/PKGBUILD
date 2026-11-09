@@ -5,8 +5,8 @@
 : "${USE_SYSTEMD:=1}"
 
 pkgname=sonic-mobile-interface
-pkgver=6.8.0
-pkgrel=2
+pkgver=6.8.2
+pkgrel=1
 pkgdesc='SonicDE interface for mobile devices'
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-mobile-interface'
@@ -72,7 +72,7 @@ provides=('plasma-mobile')
 conflicts=('plasma-mobile')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('5c79777f6f90451043aab480f1cbca72cac3fcdb4d19da31ab84435c10497b32')
+sha256sums=('5303977776b8a5a6c53e592839fce86176064b7dd270bba804b5bb3bbb77b76f')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver"
