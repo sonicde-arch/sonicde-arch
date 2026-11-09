@@ -1,6 +1,6 @@
 pkgbase = sonic-frameworks-notifications
 	pkgdesc = Abstraction for system notifications
-	pkgver = 6.31.0
+	pkgver = 6.31.0.1
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-frameworks-notifications
 	arch = x86_64
@@ -23,7 +23,7 @@ pkgbase = sonic-frameworks-notifications
 	optdepends = sonic-pyside6: Python bindings
 	provides = knotifications
 	conflicts = knotifications
-	source = sonic-frameworks-notifications-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-notifications/archive/refs/tags/6.31.0.tar.gz
-	sha256sums = 1d10c4fa7079dfbb41eb69e963c521c7c24e2cb82ebc94154c2c81623251e9a8
+	source = sonic-frameworks-notifications-6.31.0.1.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-notifications/archive/refs/tags/6.31.0.1.tar.gz
+	sha256sums = dcff6186c6df9db28c9392eb8abf9006c5268cb208811681f2ff47ce9657514a
 
 pkgname = sonic-frameworks-notifications
