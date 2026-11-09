@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-write-daemon
-pkgver=6.8.0
+pkgver=6.8.2
 pkgrel=1
 pkgdesc='SonicDE daemon listening for wall and write messages'
 arch=('x86_64')
@@ -27,7 +27,7 @@ provides=('kwrited')
 conflicts=('kwrited')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('bd29ccd2ae12ba0f460c22447c1ca494992887848aabc21663124c32047e19ad')
+sha256sums=('a5ff6e8a4e7c3718c8f7ce32939a267d0df51610e46c902a4a2348d4b54d7680')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
