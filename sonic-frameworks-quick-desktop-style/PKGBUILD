@@ -2,7 +2,7 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=sonic-frameworks-quick-desktop-style
-pkgver=6.31.0
+pkgver=6.31.0.1
 pkgrel=1
 pkgdesc='A style for Qt Quick Controls 2 to make it follow your desktop theme'
 arch=('x86_64')
@@ -30,7 +30,7 @@ provides=('qqc2-desktop-style')
 conflicts=('qqc2-desktop-style')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('f6de96fcdddae6c1d737e6dc4143c89905eb7e48616e1e0114a834ae4d24a1e0')
+sha256sums=('a6c3428f1a6c6a6630e34499ab42d8843307cd1062a37ec1f7f76bade013def4')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
