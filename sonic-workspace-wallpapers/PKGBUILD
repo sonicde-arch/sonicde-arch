@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-workspace-wallpapers
-pkgver=6.8.0
+pkgver=6.8.2
 pkgrel=1
 pkgdesc='Additional wallpapers for the Sonic Workspace'
 arch=('any')
@@ -17,7 +17,7 @@ makedepends=(
 options=('!debug')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('43d598d82b51fb6fec062ee4576a7582302381008fff4ecaf2ba31f1f4657981')
+sha256sums=('0b7a026d4c7bdff302bf48fc4f27ee530231f0a81302e006ab3ed3b6962b902c')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \

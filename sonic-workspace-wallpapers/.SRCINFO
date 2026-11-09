@@ -1,6 +1,6 @@
 pkgbase = sonic-workspace-wallpapers
 	pkgdesc = Additional wallpapers for the Sonic Workspace
-	pkgver = 6.8.0
+	pkgver = 6.8.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-workspace-wallpapers
 	arch = any
@@ -9,7 +9,7 @@ pkgbase = sonic-workspace-wallpapers
 	makedepends = qt6-base
 	makedepends = sonic-frameworks-cmake-modules
 	options = !debug
-	source = sonic-workspace-wallpapers-6.8.0.tar.gz::https://github.com/Sonic-DE/sonic-workspace-wallpapers/archive/refs/tags/6.8.0.tar.gz
-	sha256sums = 43d598d82b51fb6fec062ee4576a7582302381008fff4ecaf2ba31f1f4657981
+	source = sonic-workspace-wallpapers-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-workspace-wallpapers/archive/refs/tags/6.8.2.tar.gz
+	sha256sums = 0b7a026d4c7bdff302bf48fc4f27ee530231f0a81302e006ab3ed3b6962b902c
 
 pkgname = sonic-workspace-wallpapers
