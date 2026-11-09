@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-activities-stats
-pkgver=6.8.0
+pkgver=6.8.2
 pkgrel=1
 pkgdesc='A library for accessing the usage data collected by the activities system'
 arch=('x86_64')
@@ -29,7 +29,7 @@ replaces=('kactivities-stats')
 provides=('plasma-activities-stats')
 groups=('sonicde')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('57dfdb36c3410b89da143df982579a0f50a394b03de9408687083383991b89a8')
+sha256sums=('d16896b0872258e90c9ffabe3f9b77084b3af343434da34d1978338e9ce03cdc')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
