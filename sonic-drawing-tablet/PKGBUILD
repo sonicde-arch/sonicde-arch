@@ -31,7 +31,6 @@ depends=(
 	'sonic-frameworks-windowsystem'
 	'sonic-frameworks-xml-gui'
 	'sonic-interface-libraries'
-	'sonic-plasma5-support-library'
 	'xf86-input-wacom'
 )
 makedepends=(
