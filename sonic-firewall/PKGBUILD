@@ -44,7 +44,8 @@ sha256sums=('455b1b5973a24d434580e2eade99b38e5b3a92d6d2aae67e3b05b02ac7dafd0d')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
-		-DBUILD_TESTING=OFF
+		-DBUILD_TESTING=OFF \
+		-DUFW_PYTHON_EXECUTABLE=/usr/bin/python3
 	cmake --build build
 }
 
