@@ -32,6 +32,7 @@ depends=(
 	'sonic-frameworks-internationalization'
 	'sonic-frameworks-io'
 	'sonic-frameworks-keybind'
+	'sonic-frameworks-logging'
 	'sonic-frameworks-notifications'
 	'sonic-frameworks-package'
 	'sonic-frameworks-progress-ui'
@@ -48,6 +49,7 @@ depends=(
 	'sonic-frameworks-windowsystem'
 	'sonic-frameworks-xml-gui'
 	'sonic-interface-libraries'
+	'sonic-terminal'
 	'sonic-win'
 	'sonic-workspace'
 )
