@@ -34,7 +34,6 @@ pkgbase = sonic-theme-sdk
 	depends = sonic-frameworks-text-editor
 	depends = sonic-frameworks-widgets-addons
 	depends = sonic-interface-libraries
-	depends = sonic-plasma5-support-library
 	provides = plasma-sdk
 	conflicts = plasma-sdk
 	source = sonic-theme-sdk-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-theme-sdk/archive/refs/tags/6.8.2.tar.gz

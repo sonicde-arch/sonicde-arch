@@ -1,0 +1,16 @@
+pkgbase = sonic-frameworks-logging
+	pkgdesc = Logging library for SonicDE with per-program log files and journald support
+	pkgver = 6.31.0
+	pkgrel = 1
+	url = https://github.com/Sonic-DE/sonic-frameworks-logging
+	arch = x86_64
+	groups = sonicde-frameworks
+	license = GPL-2.0-or-later
+	makedepends = sonic-frameworks-cmake-modules
+	depends = glibc
+	depends = libstdc++
+	depends = qt6-base
+	source = sonic-frameworks-logging-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-logging/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = 4c1e38abf4b9c1cca3f31c0f8c8a531e524776699025d519f28757e9f92e7b25
+
+pkgname = sonic-frameworks-logging

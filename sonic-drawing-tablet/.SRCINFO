@@ -30,7 +30,6 @@ pkgbase = sonic-drawing-tablet
 	depends = sonic-frameworks-windowsystem
 	depends = sonic-frameworks-xml-gui
 	depends = sonic-interface-libraries
-	depends = sonic-plasma5-support-library
 	depends = xf86-input-wacom
 	provides = wacomtablet
 	conflicts = kcm-wacomtablet

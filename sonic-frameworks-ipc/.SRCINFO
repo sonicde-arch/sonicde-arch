@@ -1,0 +1,17 @@
+pkgbase = sonic-frameworks-ipc
+	pkgdesc = Peer-to-peer inter-process communication over Unix domain sockets for SonicDE
+	pkgver = 6.31.0
+	pkgrel = 1
+	url = https://github.com/Sonic-DE/sonic-frameworks-ipc
+	arch = x86_64
+	groups = sonicde-frameworks
+	license = GPL-2.0-or-later
+	makedepends = sonic-frameworks-cmake-modules
+	depends = glibc
+	depends = libstdc++
+	depends = qt6-base
+	depends = sonic-frameworks-logging
+	source = sonic-frameworks-ipc-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-ipc/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = 4c230bff7a7e259808f89ae37c421bb35005c6bdb9cb431da95cbde0fcb11849
+
+pkgname = sonic-frameworks-ipc
