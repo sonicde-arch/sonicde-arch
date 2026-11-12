@@ -1,0 +1,29 @@
+# Maintainer: callmetango
+
+pkgname=sonic-frameworks-ipc
+pkgver=6.31.0
+pkgrel=1
+pkgdesc='Peer-to-peer inter-process communication over Unix domain sockets for SonicDE'
+arch=('x86_64')
+url='https://github.com/Sonic-DE/sonic-frameworks-ipc'
+license=('GPL-2.0-or-later')
+depends=(
+	'glibc'
+	'libstdc++'
+	'qt6-base'
+	'sonic-frameworks-logging'
+)
+makedepends=('sonic-frameworks-cmake-modules')
+groups=('sonicde-frameworks')
+source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+sha256sums=('4c230bff7a7e259808f89ae37c421bb35005c6bdb9cb431da95cbde0fcb11849')
+
+build() {
+	cmake -B build -S "$pkgname-$pkgver" \
+		-DBUILD_TESTING=OFF
+	cmake --build build
+}
+
+package() {
+	DESTDIR="$pkgdir" cmake --install build
+}

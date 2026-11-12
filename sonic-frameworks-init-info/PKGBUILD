@@ -1,0 +1,29 @@
+# Maintainer: callmetango
+
+pkgname=sonic-frameworks-init-info
+pkgver=6.31.0
+pkgrel=1
+pkgdesc='Runtime detection of the init system and seat manager for SonicDE'
+arch=('x86_64')
+url='https://github.com/Sonic-DE/sonic-frameworks-init-info'
+license=('GPL-2.0-or-later')
+depends=(
+	'glibc'
+	'libstdc++'
+	'qt6-base'
+	'sonic-frameworks-logging'
+)
+makedepends=('sonic-frameworks-cmake-modules')
+groups=('sonicde-frameworks')
+source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+sha256sums=('e901ddb2512d29a6cf41a602fb5704e1567b57b73971311c6812ff4396158513')
+
+build() {
+	cmake -B build -S "$pkgname-$pkgver" \
+		-DBUILD_TESTING=OFF
+	cmake --build build
+}
+
+package() {
+	DESTDIR="$pkgdir" cmake --install build
+}

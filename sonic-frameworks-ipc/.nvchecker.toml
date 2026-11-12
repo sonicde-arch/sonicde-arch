@@ -1,0 +1,4 @@
+[sonic-frameworks-ipc]
+source = "github"
+github = "Sonic-DE/sonic-frameworks-ipc"
+use_max_tag = true

@@ -31,7 +31,6 @@ depends=(
 	'sonic-frameworks-windowsystem'
 	'sonic-interface-libraries'
 	'sonic-network-manager'
-	'sonic-plasma5-support-library'
 )
 makedepends=('sonic-frameworks-cmake-modules')
 provides=('plasma-welcome')

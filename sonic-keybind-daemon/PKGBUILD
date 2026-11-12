@@ -20,6 +20,7 @@ depends=(
 	'sonic-frameworks-dbus'
 	'sonic-frameworks-io'
 	'sonic-frameworks-keybind'
+	'sonic-frameworks-logging'
 	'sonic-frameworks-progress-ui'
 	'sonic-frameworks-settings'
 	'sonic-frameworks-windowsystem'

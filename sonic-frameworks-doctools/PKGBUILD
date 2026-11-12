@@ -21,6 +21,7 @@ depends=(
 	'libxslt'
 	'qt6-base'
 	'sonic-frameworks-archive'
+	'sonic-frameworks-logging'
 )
 makedepends=(
 	'doxygen'
