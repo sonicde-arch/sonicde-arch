@@ -30,7 +30,6 @@ depends=(
 	'sonic-frameworks-svg'
 	'sonic-frameworks-windowsystem'
 	'sonic-interface-libraries'
-	'sonic-plasma5-support-library'
 	'sonic-screen-library'
 )
 makedepends=('sonic-frameworks-cmake-modules')
