@@ -16,6 +16,7 @@ depends=(
 	'glibc'
 	'libstdc++'
 	'qt6-base'
+	'qt6-declarative'
 	'qt6-multimedia'
 	'sonic-frameworks-addons-downloader'
 	'sonic-frameworks-app-info'
@@ -45,6 +46,7 @@ depends=(
 	'sonic-frameworks-widgets-addons'
 	'sonic-frameworks-windowsystem'
 	'sonic-frameworks-xml-gui'
+	'sonic-terminal'
 )
 makedepends=(
 	'sonic-frameworks-cmake-modules'
@@ -61,7 +63,6 @@ optdepends=(
 	'kompare: comparing files menu action'
 	'sonic-frameworks-purpose: share context menu'
 	'sonic-terminal-tools: for editing file type options'
-	'sonic-terminal: terminal panel'
 )
 provides=('dolphin')
 conflicts=('dolphin')
