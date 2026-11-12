@@ -1,0 +1,28 @@
+# Maintainer: callmetango
+
+pkgname=sonic-frameworks-logging
+pkgver=6.31.0
+pkgrel=1
+pkgdesc='Logging library for SonicDE with per-program log files and journald support'
+arch=('x86_64')
+url='https://github.com/Sonic-DE/sonic-frameworks-logging'
+license=('GPL-2.0-or-later')
+depends=(
+	'glibc'
+	'libstdc++'
+	'qt6-base'
+)
+makedepends=('sonic-frameworks-cmake-modules')
+groups=('sonicde-frameworks')
+source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+sha256sums=('4c1e38abf4b9c1cca3f31c0f8c8a531e524776699025d519f28757e9f92e7b25')
+
+build() {
+	cmake -B build -S "$pkgname-$pkgver" \
+		-DBUILD_TESTING=OFF
+	cmake --build build
+}
+
+package() {
+	DESTDIR="$pkgdir" cmake --install build
+}
