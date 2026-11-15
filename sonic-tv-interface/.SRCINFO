@@ -43,6 +43,7 @@ pkgbase = sonic-tv-interface
 	depends = sonic-frameworks-svg
 	depends = sonic-frameworks-windowsystem
 	depends = sonic-interface-libraries
+	depends = sonic-keyboard
 	depends = sonic-screen-library
 	depends = sonic-workspace
 	provides = plasma-bigscreen

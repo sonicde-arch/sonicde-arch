@@ -19,6 +19,7 @@ pkgbase = sonic-frameworks-doctools
 	depends = libxslt
 	depends = qt6-base
 	depends = sonic-frameworks-archive
+	depends = sonic-frameworks-logging
 	provides = kdoctools
 	conflicts = kdoctools
 	source = sonic-frameworks-doctools-6.31.0.1.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-doctools/archive/refs/tags/6.31.0.1.tar.gz

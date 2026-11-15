@@ -1,0 +1,17 @@
+pkgbase = sonic-frameworks-init-info
+	pkgdesc = Runtime detection of the init system and seat manager for SonicDE
+	pkgver = 6.31.0
+	pkgrel = 1
+	url = https://github.com/Sonic-DE/sonic-frameworks-init-info
+	arch = x86_64
+	groups = sonicde-frameworks
+	license = GPL-2.0-or-later
+	makedepends = sonic-frameworks-cmake-modules
+	depends = glibc
+	depends = libstdc++
+	depends = qt6-base
+	depends = sonic-frameworks-logging
+	source = sonic-frameworks-init-info-6.31.0.tar.gz::https://github.com/Sonic-DE/sonic-frameworks-init-info/archive/refs/tags/6.31.0.tar.gz
+	sha256sums = e901ddb2512d29a6cf41a602fb5704e1567b57b73971311c6812ff4396158513
+
+pkgname = sonic-frameworks-init-info

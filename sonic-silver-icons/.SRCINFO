@@ -1,6 +1,6 @@
 pkgbase = sonic-silver-icons
 	pkgdesc = Silver icon theme
-	pkgver = 6.31.0.1
+	pkgver = 6.31.0.2
 	pkgrel = 1
 	url = https://github.com/Sonic-DE/sonic-silver-icons
 	arch = x86_64
@@ -15,7 +15,7 @@ pkgbase = sonic-silver-icons
 	conflicts = breeze-icons
 	replaces = sonic-frameworks-silver-icons
 	options = !debug
-	source = sonic-silver-icons-6.31.0.1.tar.gz::https://github.com/Sonic-DE/sonic-silver-icons/archive/refs/tags/6.31.0.1.tar.gz
-	sha256sums = 09cdde84d02be792f4cace85aeaa6db7b756d8a6ae4ae0c6b1172eb38f2528a5
+	source = sonic-silver-icons-6.31.0.2.tar.gz::https://github.com/Sonic-DE/sonic-silver-icons/archive/refs/tags/6.31.0.2.tar.gz
+	sha256sums = 8e38205e317f2ec5cded6300eb39b2aeba4d2f04db22b575a04947fb4436099d
 
 pkgname = sonic-silver-icons

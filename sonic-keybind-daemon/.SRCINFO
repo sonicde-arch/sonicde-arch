@@ -18,6 +18,7 @@ pkgbase = sonic-keybind-daemon
 	depends = sonic-frameworks-dbus
 	depends = sonic-frameworks-io
 	depends = sonic-frameworks-keybind
+	depends = sonic-frameworks-logging
 	depends = sonic-frameworks-progress-ui
 	depends = sonic-frameworks-settings
 	depends = sonic-frameworks-windowsystem

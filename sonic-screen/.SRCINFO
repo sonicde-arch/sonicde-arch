@@ -26,7 +26,6 @@ pkgbase = sonic-screen
 	depends = sonic-frameworks-svg
 	depends = sonic-frameworks-windowsystem
 	depends = sonic-interface-libraries
-	depends = sonic-plasma5-support-library
 	depends = sonic-screen-library
 	provides = kscreen
 	conflicts = kscreen

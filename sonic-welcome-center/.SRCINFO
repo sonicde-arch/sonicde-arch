@@ -29,7 +29,6 @@ pkgbase = sonic-welcome-center
 	depends = sonic-frameworks-windowsystem
 	depends = sonic-interface-libraries
 	depends = sonic-network-manager
-	depends = sonic-plasma5-support-library
 	provides = plasma-welcome
 	conflicts = plasma-welcome
 	source = sonic-welcome-center-6.8.2.tar.gz::https://github.com/Sonic-DE/sonic-welcome-center/archive/refs/tags/6.8.2.tar.gz
