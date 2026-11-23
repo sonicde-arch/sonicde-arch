@@ -4,7 +4,7 @@
 # Contributor: Andrea Scarpino <andrea@archlinux.org>
 
 pkgname=sonic-terminal
-pkgver=26.08.3
+pkgver=26.08.3.1
 pkgrel=1
 arch=('x86_64')
 url='https://github.com/Sonic-DE/sonic-terminal'
@@ -63,7 +63,7 @@ groups=(
 	'sonicde-utilities'
 )
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('0d567f76ad20d21d97b018609a5b3c1604b1faa0bc3c096791bab59cfeccf73e')
+sha256sums=('1c935934832ada9d072fd9ca7c84316ae0cd105d6aabc651788c1f205383bf09')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
