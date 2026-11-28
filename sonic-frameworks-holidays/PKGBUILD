@@ -2,7 +2,7 @@
 # Contributor: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=sonic-frameworks-holidays
-pkgver=6.31.0
+pkgver=6.31.0.1
 pkgrel=1
 pkgdesc='SonicDE library for regional holiday information'
 arch=('x86_64')
@@ -27,7 +27,7 @@ provides=('kholidays')
 conflicts=('kholidays')
 groups=('sonicde-frameworks')
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('3f5055523455b5dd4552f8e23fce550829187eea4764b03eea195103ecf31dd0')
+sha256sums=('b919de0737f73f183d9313ea6755b6f765383a11daeca806d9a6b7f1af37b1c1')
 
 build() {
 	cmake -B build -S "$pkgname-$pkgver" \
